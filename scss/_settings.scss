@@ -1,0 +1,23 @@
+//======================================================================
+// Layout
+//======================================================================
+$large-page-width: 1100px;
+$regular-page-width: 940px;
+$tablet-page-width: 720px;
+
+$sidebar-width: 336px;
+$bitween-sidebar-content-margin: 40px;
+
+$large-content-width: $large-page-width - ( $sidebar-width + $bitween-sidebar-content-margin );
+$regular-content-width: $regular-page-width - ( $sidebar-width + $bitween-sidebar-content-margin );
+
+//======================================================================
+// media query
+//======================================================================
+$bp-large: 1200px; // $page-widthよりも小さくならないように気をつけましょう
+$bp-regular: 992px;
+$bp-tablet: 940px; // サイドバーを落とす
+
+$mq-large: $bp-large - 1;
+$mq-regular: $bp-regular - 1;
+$mq-tablet: $bp-tablet - 1;
