@@ -172,34 +172,38 @@ a {
 /*------------------------------
 	2.5 Clearings
 ------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	clear: both;
-}
+// .clear:before,
+// .clear:after,
+// .entry-content:before,
+// .entry-content:after,
+// .comment-content:before,
+// .comment-content:after,
+// .site-header:before,
+// .site-header:after,
+// .site-content:before,
+// .site-content:after,
+// .site-footer:before,
+// .site-footer:after {
+// 	content: "";
+// 	display: table;
+// 	clear: both;
+// }
+// 
+// .clear:after,
+// .entry-content:after,
+// .comment-content:after,
+// .site-header:after,
+// .site-content:after,
+// .site-footer:after {
+// 	clear: both;
+// }
 
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.navigation {
 	clear: both;
 }
 
 /*--------------------------------------------------------------
-	3.0 Llayout
+	3.0 Layout
 --------------------------------------------------------------*/
 #primary {
 	
@@ -207,11 +211,10 @@ a {
 
 .content-area {
 	width: $large-content-width;
-	padding-top: $bitween-sidebar-content-margin;
-	padding-right: $bitween-sidebar-content-margin;
-	padding-bottom: $bitween-sidebar-content-margin;
+	margin: $bitween-sidebar-content-margin 0;
+	padding: $bitween-sidebar-content-margin;
 	margin-right: $bitween-sidebar-content-margin;
-	border-right: 1px solid lighten($text-color, 70%);
+	border: 1px solid $gray-lightest;
 }
 
 #secondary {
@@ -226,7 +229,9 @@ a {
 
 .container {
 	width: $large-page-width;
-	margin: 0 auto;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
 	&_content {
 		display: flex;
 	}
@@ -237,31 +242,66 @@ a {
 --------------------------------------------------------------*/
 /* Header
 ------------------------------*/
+.site-header-bar {
+	background: $gray-lightest;
+	padding: 2px 0;
+	&__inner {
+		text-align: right;
+	}
+	&-menu {
+		li {
+			display: inline-block;
+			& > a {
+				display: inline-block;
+				background: $brand-color;
+				color: white;
+				text-decoration: none;
+				padding: 10px 25px;
+				transition: .5s;
+				border: 2px solid $brand-color;
+				&:hover {
+					background: white;
+					color: $brand-color;
+				}
+			}	
+		}
+	}
+}
+
 .site-header {
-	line-height: 75px;
-	background: #ffffff;
+	line-height: 125px;
+	background: $brand-color;
 	width: 100%;
-	border-bottom: 1px solid lighten($text-color, 70%);
 	@include clearfix();
 	&__branding {
 		float: left;
 	}
 	&__menu {
-		
+
 	}
 }
 
 .site-title {
-	font-size: 26px;
+	font-size: 3.2rem;
+	font-size: 32px;
 	font-weight: bold;
-	@include webfont();
 	letter-spacing: 1px;
 	margin: 0;
+	a {
+		color: white;
+		&:hover {
+			text-decoration: none;
+			opacity: .8;
+		}
+	}
 }
 
 .oleinpress-menu {
+	margin: 25px 0;
+	float: right;
+	max-width: 900px;
 	ul {
-		float: right;
+		
 	}
 	li {
 		float: left;
@@ -269,19 +309,48 @@ a {
 		a {
 			line-height: 75px;
 			display: block;
-			font-size: 13px;
-// 			font-weight: bold;
-			@include webfont();
+			font-size: 14px;
 			padding-right: 25px;
 			padding-left: 25px;
-			color: $text-color;
-// 			border-right: 1px solid lighten($text-color, 70%);
+			color: white;
+			transition: .5s;
+			&:hover {
+				background: lighten( $brand-color, 5% );
+				text-decoration: none;
+			}
 		}
-		&:first-child {
-// 			border-left: 1px solid lighten($text-color, 70%);
-		}
-		ul.children {
+	}
+	li.active {
+		background: lighten( $brand-color, 10% );
+	}
+	.menu-item-has-children {
+		position: relative;
+		ul.sub-menu {
 			display: none;
+			position: absolute;
+			top: 75px;
+			left: 0;
+			z-index: 100;
+			li {
+				background: lighten($brand-color, 10%);
+				white-space: nowrap;
+				width: 100%;
+				border-left: 1px solid lighten($brand-color, 5%);
+				border-top: 1px solid lighten($brand-color, 5%);
+				border-right: 1px solid lighten($brand-color, 5%);
+				&:last-child {
+					border-bottom: 1px solid $brand-color;
+				}
+				a {
+					display: block;
+					padding-right: 15px;
+					padding-left: 15px;
+					line-height: 3em;
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
 		}
 	}
 }
@@ -289,7 +358,7 @@ a {
 /* Content
 ------------------------------*/
 .site-content {
-	background: #fafafa;
+	background: #fff;
 }
 
 /* Footer
@@ -338,6 +407,21 @@ a {
 	
 }
 
+/* Index
+------------------------------*/
+/*
+.content-area_masonry {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: 300px;
+	.list-item {
+		width: 33.3%;
+		transition: .5s;
+	}
+}
+*/
+
 /* Entry
 ------------------------------*/
 .single {
@@ -378,25 +462,30 @@ a {
 
 .list-item {
 	background: #ffffff;
-	padding: 30px;
-	margin-bottom: 30px;
+// 	padding: 30px;
+	margin: 0 0 50px;
 // 	border-bottom: 1px solid lighten($text-color, 70%);
 	@include clearfix();
-	&:first-child {
-		padding-top: 0;
-	}
 	&-content {
 		
 	}
 	&.sticky {
 		padding: 30px;
-		border: 5px solid $link-color;
+		border: 5px solid $brand-color;
 		background: white;
 	}
 }
 .entry-thumbnail {
 	float: left;
 	margin-right: 15px;
+	a {
+		display: inline-block;
+		img {
+			max-width: 100%;
+			height: auto;
+			vertical-align: bottom;
+		}
+	}
 }
 .entry-meta {
 	font-size: 12px;
@@ -423,6 +512,10 @@ a {
 			opacity: .7;
 		}
 	}
+}
+.posted-on {
+	font-size: 12px;
+	margin-bottom: 14px;
 }
 .entry-excerpt {
 	p {
@@ -468,6 +561,34 @@ a {
 		}
 	}
 }
+
+/* WordPress Pagination
+------------------------------*/
+.pagination {
+	.nav-links {
+		text-align: center;
+		.page-numbers {
+			display: inline-block;
+			padding: 7px 10px;
+			background: $gray-lightest;
+			transition: .5s;
+			&:hover {
+				background: lighten( $brand-color, 10% );
+				text-decoration: none;
+				color: white;
+			}
+		}
+		.current {
+			background: $brand-color;
+			color: white;
+		}
+		.prev,
+		.next {
+			background: none;
+		}
+	}
+}
+
 
 /* WordPress Page links style
 ------------------------------*/
@@ -680,19 +801,6 @@ a {
   }
 }
 
-/*
-@media screen and (min-width: 940px) {
-  #comments .comment .children {
-    padding-left: 90px;
-    .children {
-      padding-left: 90px;
-      .children {
-        padding-left: 90px;
-      }
-    }
-  }
-}
-*/
 
 /* Comment form
 ------------------------------*/
@@ -901,35 +1009,12 @@ a {
 /* Breadcrumbs
 ------------------------------*/
 .oleinpress-breadcrumbs {
-	background: white;
-	line-height: 50px;
+	background: $gray-lightest;
+	line-height: 40px;
 	font-size: 12px;
-	border-bottom: 1px solid lighten($text-color, 70%);
-}
-
-
-/*--------------------------------------------------------------
-# for large desktop
---------------------------------------------------------------*/
-//@import "module/large-desktop";
-
-/*--------------------------------------------------------------
-# for regular desktop
---------------------------------------------------------------*/
-@media (max-width:$mq-large) {
-	//@import "module/regular-desktop";
-}
-
-/*--------------------------------------------------------------
-# for Tablet
---------------------------------------------------------------*/
-@media (max-width:$mq-regular) {
-	//@import "module/tablet";
-}
-
-/*--------------------------------------------------------------
-# for smartphone
---------------------------------------------------------------*/
-@media (max-width:$mq-tablet) {
-	//@import "module/smartphone";
+// 	border-bottom: 1px solid lighten($text-color, 70%);
+	span {
+		margin-right: 5px;
+		margin-left: 5px;
+	}
 }

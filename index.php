@@ -23,6 +23,7 @@
 				</div>
 				<header class="entry-header">
 					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php oleinpress_posted_on() ?>
 				</header>
 				<div class="entry-excerpt">
 					<?php the_excerpt(); ?>
@@ -40,10 +41,15 @@
 		<?php
 			endwhile;
 			
-			the_posts_navigation( array(
-				'prev_text' => esc_html__( 'Older', 'oleinpress' ),
-				'next_text' => esc_html__( 'Newer', 'oleinpress' ),
-			));
+			the_posts_pagination( array(
+				'prev_text' => esc_html__( '<', 'oleinpress' ),
+				'next_text' => esc_html__( '>', 'oleinpress' ),
+			) );
+			
+			// the_posts_navigation( array(
+			// 	'prev_text' => esc_html__( 'Older', 'oleinpress' ),
+			// 	'next_text' => esc_html__( 'Newer', 'oleinpress' ),
+			// ));
 			
 			endif;
 		?>

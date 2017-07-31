@@ -64,7 +64,8 @@ function oleinpress_setup() {
 	
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'oleinpress' ),
+		'primary'    => esc_html__( 'Primary', 'oleinpress' ),
+		'header-bar' => esc_html__( 'Header bar', 'oleinpress' ),
 	) );
 	
 }
@@ -126,6 +127,8 @@ add_action( 'widgets_init', 'oleinpress_widgets_init' );
  */
 function oleinpress_scripts() {
 	wp_enqueue_style( 'oleinpress-style', get_stylesheet_uri() );
+	
+	wp_enqueue_script( 'oleinpress-menu', get_template_directory_uri() . '/js/menu.js', array( 'jquery' ), '20170731', true );
 	
 	wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
 	

@@ -17,6 +17,19 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+<div class="site-header-bar">
+	<?php
+		if ( has_nav_menu( 'header-bar' ) ){
+			wp_nav_menu( array(
+				'theme_location' => 'header-bar',
+				'menu_id' => '',
+				'menu_class' => 'site-header-bar-menu',
+				'container_class' => 'container site-header-bar__inner',
+				'depth' => 1,
+			) );
+		}
+	?>
+</div>
 <header class="site-header">
 	<div class="container">
 		<div class="site-header__branding">
@@ -25,7 +38,6 @@
 			<?php else: ?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
-<!-- 			<p class="site-description"><?php bloginfo( 'description' ); ?></p> -->
 		</div>
 		<nav class="site-header__menu">
 			<?php

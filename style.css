@@ -305,12 +305,12 @@ textarea {
 }
 
 ::-moz-selection {
-  background: #0D7ED4;
+  background: #2375B0;
   color: white;
 }
 
 ::selection {
-  background: #0D7ED4;
+  background: #2375B0;
   color: white;
 }
 
@@ -318,7 +318,7 @@ textarea {
 	2.2 Links
 ------------------------------*/
 a {
-  color: #0D7ED4;
+  color: #2375B0;
   text-decoration: none;
   outline: none;
 }
@@ -387,42 +387,19 @@ a:active, a:focus, a:hover {
 /*------------------------------
 	2.5 Clearings
 ------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
+.navigation {
   clear: both;
 }
 
 /*--------------------------------------------------------------
-	3.0 Llayout
+	3.0 Layout
 --------------------------------------------------------------*/
 .content-area {
-  width: 724px;
-  padding-top: 40px;
-  padding-right: 40px;
-  padding-bottom: 40px;
+  width: 884px;
+  margin: 40px 0;
+  padding: 40px;
   margin-right: 40px;
-  border-right: 1px solid #e6e6e6;
+  border: 1px solid #f7f7f7;
 }
 
 .sidebar {
@@ -432,8 +409,10 @@ a:active, a:focus, a:hover {
 }
 
 .container {
-  width: 1100px;
-  margin: 0 auto;
+  width: 1260px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
 }
 
 .container_content {
@@ -448,11 +427,40 @@ a:active, a:focus, a:hover {
 --------------------------------------------------------------*/
 /* Header
 ------------------------------*/
+.site-header-bar {
+  background: #f7f7f7;
+  padding: 2px 0;
+}
+
+.site-header-bar__inner {
+  text-align: right;
+}
+
+.site-header-bar-menu li {
+  display: inline-block;
+}
+
+.site-header-bar-menu li > a {
+  display: inline-block;
+  background: #1e4663;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  border: 2px solid #1e4663;
+}
+
+.site-header-bar-menu li > a:hover {
+  background: white;
+  color: #1e4663;
+}
+
 .site-header {
-  line-height: 75px;
-  background: #ffffff;
+  line-height: 125px;
+  background: #1e4663;
   width: 100%;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .site-header:after {
@@ -466,15 +474,26 @@ a:active, a:focus, a:hover {
 }
 
 .site-title {
-  font-size: 26px;
+  font-size: 3.2rem;
+  font-size: 32px;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
   letter-spacing: 1px;
   margin: 0;
 }
 
-.oleinpress-menu ul {
+.site-title a {
+  color: white;
+}
+
+.site-title a:hover {
+  text-decoration: none;
+  opacity: .8;
+}
+
+.oleinpress-menu {
+  margin: 25px 0;
   float: right;
+  max-width: 900px;
 }
 
 .oleinpress-menu li {
@@ -485,21 +504,64 @@ a:active, a:focus, a:hover {
 .oleinpress-menu li a {
   line-height: 75px;
   display: block;
-  font-size: 13px;
-  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   padding-right: 25px;
   padding-left: 25px;
-  color: #333333;
+  color: white;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
 }
 
-.oleinpress-menu li ul.children {
+.oleinpress-menu li a:hover {
+  background: #245477;
+  text-decoration: none;
+}
+
+.oleinpress-menu li.active {
+  background: #2a628a;
+}
+
+.oleinpress-menu .menu-item-has-children {
+  position: relative;
+}
+
+.oleinpress-menu .menu-item-has-children ul.sub-menu {
   display: none;
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 100;
+}
+
+.oleinpress-menu .menu-item-has-children ul.sub-menu li {
+  background: #2a628a;
+  white-space: nowrap;
+  width: 100%;
+  border-left: 1px solid #245477;
+  border-top: 1px solid #245477;
+  border-right: 1px solid #245477;
+}
+
+.oleinpress-menu .menu-item-has-children ul.sub-menu li:last-child {
+  border-bottom: 1px solid #1e4663;
+}
+
+.oleinpress-menu .menu-item-has-children ul.sub-menu li a {
+  display: block;
+  padding-right: 15px;
+  padding-left: 15px;
+  line-height: 3em;
+}
+
+.oleinpress-menu .menu-item-has-children ul.sub-menu li a:hover {
+  text-decoration: none;
 }
 
 /* Content
 ------------------------------*/
 .site-content {
-  background: #fafafa;
+  background: #fff;
 }
 
 /* Footer
@@ -545,6 +607,20 @@ a:active, a:focus, a:hover {
 ------------------------------*/
 /* Page: Search
 ------------------------------*/
+/* Index
+------------------------------*/
+/*
+.content-area_masonry {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	max-height: 300px;
+	.list-item {
+		width: 33.3%;
+		transition: .5s;
+	}
+}
+*/
 /* Entry
 ------------------------------*/
 .single .post {
@@ -770,7 +846,7 @@ a:active, a:focus, a:hover {
 }
 
 .single .entry-content mark {
-  background-color: #0D7ED4;
+  background-color: #2375B0;
   text-decoration: none;
 }
 
@@ -991,8 +1067,7 @@ a:active, a:focus, a:hover {
 
 .list-item {
   background: #ffffff;
-  padding: 30px;
-  margin-bottom: 30px;
+  margin: 0 0 50px;
 }
 
 .list-item:after {
@@ -1001,19 +1076,25 @@ a:active, a:focus, a:hover {
   display: block;
 }
 
-.list-item:first-child {
-  padding-top: 0;
-}
-
 .list-item.sticky {
   padding: 30px;
-  border: 5px solid #0D7ED4;
+  border: 5px solid #1e4663;
   background: white;
 }
 
 .entry-thumbnail {
   float: left;
   margin-right: 15px;
+}
+
+.entry-thumbnail a {
+  display: inline-block;
+}
+
+.entry-thumbnail a img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 .entry-meta {
@@ -1041,6 +1122,11 @@ a:active, a:focus, a:hover {
 
 .entry-title a:hover {
   opacity: .7;
+}
+
+.posted-on {
+  font-size: 12px;
+  margin-bottom: 14px;
 }
 
 .entry-excerpt p {
@@ -1092,6 +1178,37 @@ a:active, a:focus, a:hover {
   font-family: fontawesome;
   content: "\f105";
   margin-left: 5px;
+}
+
+/* WordPress Pagination
+------------------------------*/
+.pagination .nav-links {
+  text-align: center;
+}
+
+.pagination .nav-links .page-numbers {
+  display: inline-block;
+  padding: 7px 10px;
+  background: #f7f7f7;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+
+.pagination .nav-links .page-numbers:hover {
+  background: #2a628a;
+  text-decoration: none;
+  color: white;
+}
+
+.pagination .nav-links .current {
+  background: #1e4663;
+  color: white;
+}
+
+.pagination .nav-links .prev,
+.pagination .nav-links .next {
+  background: none;
 }
 
 /* WordPress Page links style
@@ -1419,7 +1536,7 @@ a > .page-links-item {
 }
 
 #comments .comment-content mark {
-  background-color: #0D7ED4;
+  background-color: #2375B0;
   text-decoration: none;
 }
 
@@ -1733,19 +1850,6 @@ a > .page-links-item {
   text-decoration: underline;
 }
 
-/*
-@media screen and (min-width: 940px) {
-  #comments .comment .children {
-    padding-left: 90px;
-    .children {
-      padding-left: 90px;
-      .children {
-        padding-left: 90px;
-      }
-    }
-  }
-}
-*/
 /* Comment form
 ------------------------------*/
 #respond {
@@ -1942,7 +2046,7 @@ a > .page-links-item {
 }
 
 .widget_search .search-submit {
-  background: #0D7ED4;
+  background: #2375B0;
   width: 100%;
   color: white;
   padding: 1em;
@@ -2146,7 +2250,7 @@ a > .page-links-item {
 }
 
 .widget_text .textwidget mark {
-  background-color: #0D7ED4;
+  background-color: #2375B0;
   text-decoration: none;
 }
 
@@ -2365,21 +2469,12 @@ a > .page-links-item {
 /* Breadcrumbs
 ------------------------------*/
 .oleinpress-breadcrumbs {
-  background: white;
-  line-height: 50px;
+  background: #f7f7f7;
+  line-height: 40px;
   font-size: 12px;
-  border-bottom: 1px solid #e6e6e6;
 }
 
-/*--------------------------------------------------------------
-# for large desktop
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# for regular desktop
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# for Tablet
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# for smartphone
---------------------------------------------------------------*/
+.oleinpress-breadcrumbs span {
+  margin-right: 5px;
+  margin-left: 5px;
+}
