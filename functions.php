@@ -134,6 +134,10 @@ function oleinpress_scripts() {
 	
 	wp_enqueue_style( 'noto-sans-jp', '//fonts.googleapis.com/earlyaccess/notosansjp.css' );
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,700' );
+	
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'oleinpress_scripts' );
 

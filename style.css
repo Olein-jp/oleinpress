@@ -163,7 +163,7 @@ Description:
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Tags:
+Text Domain: oleinpress
 
 */
 /*--------------------------------------------------------------
@@ -1744,6 +1744,10 @@ a > .page-links-item {
 
 #comments .comment-content input[type="radio"], #comments .comment-content input[type="checkbox"] {
   margin: 0 10px;
+}
+
+#comments .bypostauthor {
+  display: inline-block;
 }
 
 #comments .comment {

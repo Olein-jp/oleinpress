@@ -17,7 +17,7 @@ Description:
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
-Tags:
+Text Domain: oleinpress
 
 */
 /*--------------------------------------------------------------
@@ -711,6 +711,9 @@ a {
   }
   .comment-content {
 		@include content-styling();
+  }
+  .bypostauthor {
+	  display: inline-block;
   }
   .comment {
     list-style: none;

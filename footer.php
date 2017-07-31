@@ -20,7 +20,7 @@
 		<?php } ?>
 	</div>
 	<div class="copyright">
-		<p>©Copyright <a href="<?php bloginfo( 'url' ); ?>"><?php bloginfo( 'title' ); ?></a>. All Rights Reserved.</p>
+		<p>©Copyright <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>. All Rights Reserved.</p>
 	</div>
 </footer>
 </div>
