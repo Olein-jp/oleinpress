@@ -1,5 +1,18 @@
 @charset "UTF-8";
 /*
+Theme Name: OleinPress
+Theme URI: demo.olein-design.com/oleinpress/
+Author: olein
+Author URI: http://olein-design.com
+Description: A simple and customizable WordPress theme - OleinPress. It's easy to start creating your blog or website.
+Version: 1.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Tags: custom-menu, sticky-post
+Text Domain: oleinpress
+
+*/
+/*
 @mixin content-styling(){
 
 h1,
@@ -153,19 +166,6 @@ div {
 
 
 }
-*/
-/*
-Theme Name: OleinPress
-Theme URI: demo.olein-design.com/oleinpress/
-Author: olein
-Author URI: http://olein-design.com
-Description: A simple and customizable WordPress theme - OleinPress. It's easy to start creating your blog or website.
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
-Tags: custom-menu, sticky-post
-Text Domain: oleinpress
-
 */
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
