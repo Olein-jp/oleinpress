@@ -412,7 +412,7 @@ a:active, a:focus, a:hover {
   width: 1260px;
   margin-right: auto;
   margin-left: auto;
-  clear: both;
+  overflow: hidden;
 }
 
 .container_content {
@@ -473,7 +473,11 @@ a:active, a:focus, a:hover {
   float: left;
 }
 
-.site-title {
+.site-header__menu {
+  float: right;
+}
+
+.site-title_text {
   font-size: 3.2rem;
   font-size: 32px;
   font-weight: bold;
@@ -481,19 +485,25 @@ a:active, a:focus, a:hover {
   margin: 0;
 }
 
-.site-title a {
+.site-title_text a {
   color: white;
 }
 
-.site-title a:hover {
+.site-title_text a:hover {
   text-decoration: none;
   opacity: .8;
 }
 
+.site-title_img {
+  height: 75px;
+  margin: 25px 0;
+  max-width: 300px;
+}
+
 .oleinpress-menu {
   margin: 25px 0;
-  float: right;
   max-width: 900px;
+  height: 75px;
 }
 
 .oleinpress-menu li {
@@ -1224,7 +1234,7 @@ a:active, a:focus, a:hover {
   border: 1px solid #e6e6e6;
 }
 
-a > .page-links-item {
+.page-links-item a {
   background: #b3b3b3;
   color: white;
 }
@@ -1267,6 +1277,7 @@ a > .page-links-item {
   text-align: center;
   vertical-align: top;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .gallery-columns-2 .gallery-item {
@@ -1302,6 +1313,9 @@ a > .page-links-item {
 }
 
 .gallery-caption {
+  font-size: 1.2rem;
+  font-size: 12px;
+  margin-top: 5px;
   display: block;
 }
 
