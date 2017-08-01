@@ -1,8 +1,13 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : footer.php
- * created   : 2017/06/16
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 </div>

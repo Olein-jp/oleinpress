@@ -1,8 +1,13 @@
 <?php
-/*
- * project   :OD Base
- * file name :index.php
- * created   :2017/06/13
+/**
+ * 
+ * OleinPress
+ *
+ * file name : index.php
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <?php get_header(); ?>

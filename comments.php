@@ -1,8 +1,13 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : comments.php
- * created   : 2017/06/19
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <?php

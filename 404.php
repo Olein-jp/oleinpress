@@ -1,22 +1,27 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : 404.php
- * created   : 2017/06/19
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <?php get_header(); ?>
 	<main id="primary" class="content-area">
 		<header class="page-header">
-			<h1 class="page-title">お探しのページが存在しませんでした。</h1>
+			<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'oleinpress' ); ?></h1>
 		</header>
 		<section class="error-404">
-			<h2>検索フォームよりキーワードを検索</h2>
+			<h2><?php esc_html_e( 'Please search below.', 'oleinpress' ); ?></h2>
 			<?php
 				get_search_form();
 				the_widget( 'WP_Widget_Recent_Posts' );
 			?>
-			<h2>記事数の多いカテゴリー</h2>
+			<h2><?php esc_html_e( 'Reccomended Category.', 'oleinpress' ); ?></h2>
 			<ul>
 			<?php
 				wp_list_categories( array(

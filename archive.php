@@ -1,8 +1,13 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : archive.php
- * created   : 2017/06/18
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <?php get_header(); ?>
