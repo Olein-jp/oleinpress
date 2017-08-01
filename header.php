@@ -33,21 +33,32 @@
 <header class="site-header">
 	<div class="container">
 		<div class="site-header__branding">
-			<?php if ( is_home() || is_front_page() ): ?>
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+				<?php if ( is_home() || is_front_page() ): ?>
+					<h1 class="site-title_img"><?php the_custom_logo(); ?></h1>
+				<?php else: ?>
+					<p class="site-title_img"><?php the_custom_logo(); ?></p>
+				<?php endif; ?>
 			<?php else: ?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php if ( is_home() || is_front_page() ): ?>
+					<h1 class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+				<?php else: ?>
+					<p class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+				<?php endif; ?>
 			<?php endif; ?>
 		</div>
-		<nav class="site-header__menu">
+<!-- 		<nav class="site-header__menu"> -->
 			<?php
 				wp_nav_menu( array(
 					'theme_location' => 'primary',
+					'container' => 'nav',
+					'container_class' => 'site-header__menu',
+					'menu_id' => 'oleinpress-menu',
 					'menu_class' => 'oleinpress-menu',
 					'depth' => 0,
 				) );
 			?>
-		</nav>
+<!-- 		</nav> -->
 	</div>
 </header>
 <?php do_action( 'oleinpress_breadcrumbs' ); ?>
