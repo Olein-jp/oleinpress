@@ -1,48 +1,47 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : single.php
- * created   : 2017/06/16
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <?php get_header(); ?>
 <div class="container container_content">
 	<main id="primary" class="content-area">
 		<?php while ( have_posts() ): the_post(); ?>
-		<?php
-			// カテゴリー名をリンクなしで取得したい場合
-			$cat = get_the_category();
-			$cat = $cat[0];
-			// 出力はline.23
-		?>
-		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
-			<header class="entry-header">
-				<h1 class="entry-title"><?php the_title(); ?></a></h1>
-				<div class="entry-meta">
-					<?php oleinpress_posted_on(); ?>
-				</div>
-			</header>
+		<article id="post-<?php the_id(); ?>" <?php post_class( 'list-item' ); ?>>
 			<?php if ( has_post_thumbnail() ): ?>
 			<figure class="entry-thumbnail">
-				<?php the_post_thumbnail(); ?>
+				<a href="<?php the_permalink(); ?>" rel="bookmark">
+				<?php the_post_thumbnail( 'olenpress-blog-thumbnail' ); ?>
+				</a>
 			</figure>
 			<?php endif; ?>
-			<div class="entry-content">
-				<?php the_content(); ?>
-				<?php
-					wp_link_pages( array(
-						'before' => '<div class="page-links">',
-						'after'  => '</div>',
-						'link_before' => '<span class="page-links-item">',
-						'link_after' => '</span>',
-					) );
-				?>
-			</div>
-			<footer class="entry-footer">
+			<div class="list-item-content">
 				<div class="entry-meta">
-					<?php oleinpress_entry_footer(); ?>
+					<?php the_category(' / '); ?>
 				</div>
-			</footer>
+				<header class="entry-header">
+					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+					<?php oleinpress_posted_on() ?>
+				</header>
+				<div class="entry-excerpt">
+					<?php the_excerpt(); ?>
+					<?php
+						wp_link_pages( array(
+							'before' => '<div class="page-links">',
+							'after'  => '</div>',
+							'link_before' => '<span class="page-links-item">',
+							'link_after' => '</span>',
+						) );
+					?>
+				</div>
+			</div>
 		</article>
 		<?php
 			if ( comments_open() || get_comments_number() ) :
@@ -51,7 +50,10 @@
 			
 			endwhile;
 		
-			the_post_navigation();
+			the_posts_pagination( array(
+				'prev_text' => esc_html__( '<', 'oleinpress' ),
+				'next_text' => esc_html__( '>', 'oleinpress' ),
+			) );
 		?>
 	</main>
 <?php get_sidebar(); ?>

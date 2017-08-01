@@ -1,8 +1,13 @@
 <?php
-/*
- * project   : OD Base
+/**
+ * 
+ * OleinPress
+ *
  * file name : sidebar.php
- * created   : 2017/06/16
+ *
+ * created   : 2017/08/01
+ *
+ * @package OleinPress
  */
 ?>
 <aside id="secondary" class="sidebar" role="complementary">
