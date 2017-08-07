@@ -400,7 +400,7 @@ a:active, a:focus, a:hover {
   margin: 40px 0;
   padding: 40px;
   margin-right: 40px;
-  border: 1px solid #f7f7f7;
+  border: 1px solid #e6e6e6;
 }
 
 .sidebar {
@@ -413,7 +413,6 @@ a:active, a:focus, a:hover {
   width: 1260px;
   margin-right: auto;
   margin-left: auto;
-  overflow: hidden;
 }
 
 .container_content {
@@ -529,43 +528,43 @@ a:active, a:focus, a:hover {
   text-decoration: none;
 }
 
-.oleinpress-menu li.active {
+.oleinpress-menu li.active, .oleinpress-menu li.current-menu-item {
   background: #2a628a;
 }
 
-.oleinpress-menu .menu-item-has-children {
+.oleinpress-menu li.menu-item-has-children {
   position: relative;
 }
 
-.oleinpress-menu .menu-item-has-children ul.sub-menu {
+.oleinpress-menu li.menu-item-has-children ul.sub-menu {
   display: none;
   position: absolute;
   top: 75px;
   left: 0;
-  z-index: 100;
 }
 
-.oleinpress-menu .menu-item-has-children ul.sub-menu li {
+.oleinpress-menu li.menu-item-has-children ul.sub-menu li {
   background: #2a628a;
   white-space: nowrap;
   width: 100%;
   border-left: 1px solid #245477;
   border-top: 1px solid #245477;
   border-right: 1px solid #245477;
+  z-index: 1000;
 }
 
-.oleinpress-menu .menu-item-has-children ul.sub-menu li:last-child {
+.oleinpress-menu li.menu-item-has-children ul.sub-menu li:last-child {
   border-bottom: 1px solid #1e4663;
 }
 
-.oleinpress-menu .menu-item-has-children ul.sub-menu li a {
+.oleinpress-menu li.menu-item-has-children ul.sub-menu li a {
   display: block;
   padding-right: 15px;
   padding-left: 15px;
   line-height: 3em;
 }
 
-.oleinpress-menu .menu-item-has-children ul.sub-menu li a:hover {
+.oleinpress-menu li.menu-item-has-children ul.sub-menu li a:hover {
   text-decoration: none;
 }
 
@@ -1210,6 +1209,10 @@ a:active, a:focus, a:hover {
   background: #2a628a;
   text-decoration: none;
   color: white;
+}
+
+.pagination .nav-links .dots {
+  background: white;
 }
 
 .pagination .nav-links .current {

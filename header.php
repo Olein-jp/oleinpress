@@ -52,18 +52,16 @@
 				<?php endif; ?>
 			<?php endif; ?>
 		</div>
-<!-- 		<nav class="site-header__menu"> -->
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'container' => 'nav',
-					'container_class' => 'site-header__menu',
-					'menu_id' => 'oleinpress-menu',
-					'menu_class' => 'oleinpress-menu',
-					'depth' => 0,
-				) );
-			?>
-<!-- 		</nav> -->
+		<?php
+			wp_nav_menu( array(
+				'theme_location' => 'primary',
+				'container' => 'nav',
+				'container_class' => 'site-header__menu',
+				'menu_id' => 'oleinpress-menu',
+				'menu_class' => 'oleinpress-menu',
+				'depth' => 0,
+			) );
+		?>
 	</div>
 </header>
 <?php do_action( 'oleinpress_breadcrumbs' ); ?>
