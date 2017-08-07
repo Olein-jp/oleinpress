@@ -1,16 +1,29 @@
+//======================================================================
+// Breakpoint
+//======================================================================
 $breakpoint-up: (
-	'sm': 'screen and (min-width: 400px)',
-	'md': 'screen and (min-width: 940px)',
-	'lg': 'screen and (min-width: 1000px)',
-	'xl': 'screen and (min-width: 1300px)',
+	'sp': 'screen and (min-width: 768px)',
+	'tb': 'screen and (min-width: 940px)',
+	'md': 'screen and (min-width: 1000px)',
+	'lg': 'screen and (min-width: 1300px)',
 ) !default;
 
 $breakpoint-down: (
-	'sm': 'screen and (max-width: 399px)',
-	'md': 'screen and (max-width: 939px)',
-	'lg': 'screen and (max-width: 999px)',
-	'xl': 'screen and (max-width: 1299px)',
+	'sp': 'screen and (max-width: 767px)',
+	'tb': 'screen and (max-width: 939px)',
+	'md': 'screen and (max-width: 999px)',
+	'lg': 'screen and (max-width: 1299px)',
 ) !default;
+
+//
+// It's means sign below
+// -------------------------
+// sp : smartphone
+// tb : tablet
+// md : medium
+// lg : large
+// -------------------------
+//
 
 
 @mixin mq-up($breakpoint: xl) {
@@ -24,3 +37,15 @@ $breakpoint-down: (
 		@content;
 	}
 }
+
+//======================================================================
+// Sizes (part of layout)
+//======================================================================
+$lg-page-width: 1260px;
+$md-page-width: 920px;
+$tb-page-width: 720px;
+
+$sidebar-width: 336px;
+$margin: 40px;
+
+$large-content-width: $lg-page-width - ( $sidebar-width + $margin );

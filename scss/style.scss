@@ -19,7 +19,7 @@ Text Domain: oleinpress
 @import "owned/mixin";
 @import "owned/variables";
 @import "owned/content-styling";
-@import "settings";
+//@import "settings";
 @import "owned/mediaquery";
 
 
@@ -214,10 +214,26 @@ a {
 
 .content-area {
 	width: $large-content-width;
-	margin: $bitween-sidebar-content-margin 0;
-	padding: $bitween-sidebar-content-margin;
-	margin-right: $bitween-sidebar-content-margin;
+	margin: $margin 0;
+	padding: $margin;
+	margin-right: $margin;
 	border: 1px solid $gray-lighter;
+	@include mq-down(md) {
+		margin-right: 0;
+		width: $md-page-width;
+	}
+	@include mq-down(tb) {
+		width: $tb-page-width;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	@include mq-down(sp) {
+		width: 100%;
+		border: none;
+		margin-top: 0;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
 }
 
 #secondary {
@@ -226,16 +242,37 @@ a {
 
 .sidebar {
 	width: $sidebar-width;
-	padding-top: $bitween-sidebar-content-margin;
-	padding-bottom: $bitween-sidebar-content-margin;
+	padding-top: $margin;
+	padding-bottom: $margin;
+	@include mq-down(md) {
+		width: $md-page-width;
+	}
+	@include mq-down(tb) {
+		width: $tb-page-width;
+	}
+	@include mq-down(sp) {
+		width: 100%;
+	}
 }
 
 .container {
-	width: $large-page-width;
+	width: $lg-page-width;
 	margin-right: auto;
 	margin-left: auto;
+	@include mq-down(lg) {
+		width: $md-page-width;
+	}
+	@include mq-down(tb) {
+		width: $tb-page-width;
+	}
+	@include mq-down(sp) {
+		width: 100%;
+	}
 	&_content {
 		display: flex;
+		@include mq-down(md) {
+			display: block;
+		}
 	}
 }
 
@@ -376,17 +413,23 @@ a {
 		padding: 50px 0;
 	}
 	&-leftbox,
+	&-centerbox,
 	&-rightbox {
 		float: left;
 		width: 30%;
+		@include mq-down(tb) {
+			float: none;
+			width: 100%;
+		}
 	}
-	&-leftbox {
-		margin-left: 15%;
+	&-leftbox, &-centerbox {
 		margin-right: 5%;
+		@include mq-down(tb) {
+			margin-right: 0;
+		}
 	}
 	&-rightbox {
-		margin-left: 5%;
-		margin-right: 15%;
+		margin-right: 0;
 	}
 	.copyright {
 		clear: both;

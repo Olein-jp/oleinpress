@@ -18,6 +18,11 @@
 		<?php dynamic_sidebar( 'footer-left' ); ?>
 		</div>
 		<?php } ?>
+		<?php if ( ! is_active_sidebar( 'footer-center' ) ){ return; } else { ?>
+		<div class="site-footer-centerbox">
+		<?php dynamic_sidebar( 'footer-center' ); ?>
+		</div>
+		<?php } ?>
 		<?php if ( ! is_active_sidebar( 'footer-right' ) ){ return; } else { ?>
 		<div class="site-footer-rightbox">
 		<?php dynamic_sidebar( 'footer-right' ); ?>

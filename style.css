@@ -403,10 +403,53 @@ a:active, a:focus, a:hover {
   border: 1px solid #e6e6e6;
 }
 
+@media screen and (max-width: 999px) {
+  .content-area {
+    margin-right: 0;
+    width: 920px;
+  }
+}
+
+@media screen and (max-width: 939px) {
+  .content-area {
+    width: 720px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content-area {
+    width: 100%;
+    border: none;
+    margin-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 .sidebar {
   width: 336px;
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+@media screen and (max-width: 999px) {
+  .sidebar {
+    width: 920px;
+  }
+}
+
+@media screen and (max-width: 939px) {
+  .sidebar {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar {
+    width: 100%;
+  }
 }
 
 .container {
@@ -415,11 +458,35 @@ a:active, a:focus, a:hover {
   margin-left: auto;
 }
 
+@media screen and (max-width: 1299px) {
+  .container {
+    width: 920px;
+  }
+}
+
+@media screen and (max-width: 939px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+}
+
 .container_content {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 999px) {
+  .container_content {
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -584,19 +651,30 @@ a:active, a:focus, a:hover {
   padding: 50px 0;
 }
 
-.site-footer-leftbox, .site-footer-rightbox {
+.site-footer-leftbox, .site-footer-centerbox, .site-footer-rightbox {
   float: left;
   width: 30%;
 }
 
-.site-footer-leftbox {
-  margin-left: 15%;
+@media screen and (max-width: 939px) {
+  .site-footer-leftbox, .site-footer-centerbox, .site-footer-rightbox {
+    float: none;
+    width: 100%;
+  }
+}
+
+.site-footer-leftbox, .site-footer-centerbox {
   margin-right: 5%;
 }
 
+@media screen and (max-width: 939px) {
+  .site-footer-leftbox, .site-footer-centerbox {
+    margin-right: 0;
+  }
+}
+
 .site-footer-rightbox {
-  margin-left: 5%;
-  margin-right: 15%;
+  margin-right: 0;
 }
 
 .site-footer .copyright {
