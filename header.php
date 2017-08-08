@@ -36,6 +36,19 @@
 	?>
 </div>
 <header class="site-header">
+	<a class="menu-trigger" href="#">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</a>
+	<script>
+		jQuery(function($){
+			$('.menu-trigger').click(function(){
+				$('.oleinpress-menu').fadeToggle(400);
+				$('.menu-trigger').toggleClass('active');
+			});
+		});
+	</script>
 	<div class="container">
 		<div class="site-header__branding">
 			<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
