@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * OleinPress
  *
  * file name : index.php
@@ -13,9 +13,11 @@
 <?php get_header(); ?>
 <div class="container container_content">
 	<main id="primary" class="content-area">
-		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : ?>
+				<?php the_post(); ?>
 		<article id="post-<?php the_id(); ?>" <?php post_class( 'list-item' ); ?>>
-			<?php if ( has_post_thumbnail() ): ?>
+			<?php if ( has_post_thumbnail() ) : ?>
 			<figure class="entry-thumbnail">
 				<a href="<?php the_permalink(); ?>" rel="bookmark">
 				<?php the_post_thumbnail( 'olenpress-blog-thumbnail' ); ?>
@@ -24,11 +26,11 @@
 			<?php endif; ?>
 			<div class="list-item-content">
 				<div class="entry-meta">
-					<?php the_category(' / '); ?>
+					<?php the_category( ' / ' ); ?>
 				</div>
 				<header class="entry-header">
 					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-					<?php oleinpress_posted_on() ?>
+					<?php oleinpress_posted_on(); ?>
 				</header>
 				<div class="entry-excerpt">
 					<?php the_excerpt(); ?>
@@ -45,17 +47,10 @@
 		</article>
 		<?php
 			endwhile;
-			
 			the_posts_pagination( array(
 				'prev_text' => esc_html__( '<', 'oleinpress' ),
 				'next_text' => esc_html__( '>', 'oleinpress' ),
 			) );
-			
-			// the_posts_navigation( array(
-			// 	'prev_text' => esc_html__( 'Older', 'oleinpress' ),
-			// 	'next_text' => esc_html__( 'Newer', 'oleinpress' ),
-			// ));
-			
 			endif;
 		?>
 	</main>
