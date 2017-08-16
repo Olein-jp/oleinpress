@@ -26,11 +26,11 @@
 	<?php
 	if ( has_nav_menu( 'header-bar' ) ) {
 			wp_nav_menu( array(
-				'theme_location' => 'header-bar',
-				'menu_id' => '',
-				'menu_class' => 'site-header-bar-menu',
+				'theme_location'  => 'header-bar',
+				'menu_id'         => '',
+				'menu_class'      => 'site-header-bar-menu',
 				'container_class' => 'container site-header-bar__inner',
-				'depth' => 1,
+				'depth'           => 1,
 			) );
 	}
 	?>
