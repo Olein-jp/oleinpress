@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * OleinPress
  *
  * file name : header.php
@@ -24,7 +24,7 @@
 <div id="page" class="site">
 <div class="site-header-bar">
 	<?php
-		if ( has_nav_menu( 'header-bar' ) ){
+	if ( has_nav_menu( 'header-bar' ) ) {
 			wp_nav_menu( array(
 				'theme_location' => 'header-bar',
 				'menu_id' => '',
@@ -32,7 +32,7 @@
 				'container_class' => 'container site-header-bar__inner',
 				'depth' => 1,
 			) );
-		}
+	}
 	?>
 </div>
 <header class="site-header">
@@ -52,27 +52,27 @@
 	<div class="container">
 		<div class="site-header__branding">
 			<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
-				<?php if ( is_home() || is_front_page() ): ?>
+				<?php if ( is_home() || is_front_page() ) : ?>
 					<h1 class="site-title_img"><?php the_custom_logo(); ?></h1>
-				<?php else: ?>
+				<?php else : ?>
 					<p class="site-title_img"><?php the_custom_logo(); ?></p>
 				<?php endif; ?>
-			<?php else: ?>
-				<?php if ( is_home() || is_front_page() ): ?>
+			<?php else : ?>
+				<?php if ( is_home() || is_front_page() ) : ?>
 					<h1 class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else: ?>
+				<?php else : ?>
 					<p class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php endif; ?>
 			<?php endif; ?>
 		</div>
 		<?php
 			wp_nav_menu( array(
-				'theme_location' => 'primary',
-				'container' => 'nav',
+				'theme_location'  => 'primary',
+				'container'       => 'nav',
 				'container_class' => 'site-header__menu',
-				'menu_id' => 'oleinpress-menu',
-				'menu_class' => 'oleinpress-menu',
-				'depth' => 0,
+				'menu_id'         => 'oleinpress-menu',
+				'menu_class'      => 'oleinpress-menu',
+				'depth'           => 0,
 			) );
 		?>
 	</div>
