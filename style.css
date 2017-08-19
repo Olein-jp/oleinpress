@@ -605,18 +605,19 @@ a:active, a:focus, a:hover {
   display: inline-block;
 }
 
-.oleinpress-menu {
+.site-header__menu ul {
+  float: right;
   margin: 25px 0;
   max-width: 900px;
   height: 75px;
 }
 
-.oleinpress-menu li {
+.site-header__menu ul li {
   float: left;
   display: inline-block;
 }
 
-.oleinpress-menu li a {
+.site-header__menu ul li a {
   line-height: 75px;
   display: block;
   font-size: 14px;
@@ -629,27 +630,27 @@ a:active, a:focus, a:hover {
   transition: .5s;
 }
 
-.oleinpress-menu li a:hover {
+.site-header__menu ul li a:hover {
   background: #245477;
   text-decoration: none;
 }
 
-.oleinpress-menu li.active, .oleinpress-menu li.current-menu-item {
+.site-header__menu ul li.active, .site-header__menu ul li.current-menu-item {
   background: #2a628a;
 }
 
-.oleinpress-menu li.menu-item-has-children {
+.site-header__menu ul li.menu-item-has-children {
   position: relative;
 }
 
-.oleinpress-menu li.menu-item-has-children ul.sub-menu {
+.site-header__menu ul li.menu-item-has-children ul.sub-menu {
   display: none;
   position: absolute;
   top: 75px;
   left: 0;
 }
 
-.oleinpress-menu li.menu-item-has-children ul.sub-menu li {
+.site-header__menu ul li.menu-item-has-children ul.sub-menu li {
   background: #2a628a;
   white-space: nowrap;
   width: 100%;
@@ -659,23 +660,23 @@ a:active, a:focus, a:hover {
   z-index: 1000;
 }
 
-.oleinpress-menu li.menu-item-has-children ul.sub-menu li:last-child {
+.site-header__menu ul li.menu-item-has-children ul.sub-menu li:last-child {
   border-bottom: 1px solid #1e4663;
 }
 
-.oleinpress-menu li.menu-item-has-children ul.sub-menu li a {
+.site-header__menu ul li.menu-item-has-children ul.sub-menu li a {
   display: block;
   padding-right: 15px;
   padding-left: 15px;
   line-height: 3em;
 }
 
-.oleinpress-menu li.menu-item-has-children ul.sub-menu li a:hover {
+.site-header__menu ul li.menu-item-has-children ul.sub-menu li a:hover {
   text-decoration: none;
 }
 
 @media screen and (max-width: 999px) {
-  .oleinpress-menu {
+  .site-header__menu ul {
     display: none;
     position: fixed;
     top: 0;
@@ -688,26 +689,26 @@ a:active, a:focus, a:hover {
     background: rgba(255, 255, 255, 0.95);
     padding-top: 125px;
   }
-  .oleinpress-menu li {
+  .site-header__menu ul li {
     float: none;
     display: block;
   }
-  .oleinpress-menu li a {
+  .site-header__menu ul li a {
     color: #1e4663;
   }
-  .oleinpress-menu li a:hover {
+  .site-header__menu ul li a:hover {
     background: rgba(30, 70, 99, 0.15);
   }
-  .oleinpress-menu li.menu-item-has-children ul.sub-menu {
+  .site-header__menu ul li.menu-item-has-children ul.sub-menu {
     display: block;
     position: static;
   }
-  .oleinpress-menu li.menu-item-has-children ul.sub-menu li {
+  .site-header__menu ul li.menu-item-has-children ul.sub-menu li {
     background: transparent;
     border: none;
     padding-left: 30px;
   }
-  .oleinpress-menu li.menu-item-has-children ul.sub-menu li:last-child {
+  .site-header__menu ul li.menu-item-has-children ul.sub-menu li:last-child {
     border-bottom: none;
   }
 }

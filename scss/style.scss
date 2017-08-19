@@ -367,7 +367,8 @@ a {
 	display: inline-block;
 }
 
-.oleinpress-menu {
+.site-header__menu ul {
+	float: right;
 	margin: 25px 0;
 	max-width: 900px;
 	height: 75px;

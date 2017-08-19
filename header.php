@@ -22,19 +22,19 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
+<?php if ( has_nav_menu( 'header-bar' ) ) { ?>
 <div class="site-header-bar">
-	<?php
-	if ( has_nav_menu( 'header-bar' ) ) {
-			wp_nav_menu( array(
-				'theme_location'  => 'header-bar',
-				'menu_id'         => '',
-				'menu_class'      => 'site-header-bar-menu',
-				'container_class' => 'container site-header-bar__inner',
-				'depth'           => 1,
-			) );
-	}
-	?>
+<?php
+wp_nav_menu( array(
+	'theme_location'  => 'header-bar',
+	'menu_id'         => '',
+	'menu_class'      => 'site-header-bar-menu',
+	'container_class' => 'container site-header-bar__inner',
+	'depth'           => 1,
+) );
+?>
 </div>
+<?php } ?>
 <header class="site-header">
 	<a class="menu-trigger" href="#">
 	  <span></span>
@@ -51,7 +51,7 @@
 	</script>
 	<div class="container">
 		<div class="site-header__branding">
-			<?php if ( function_exists( 'the_custom_logo' ) ) : ?>
+			<?php if ( has_custom_logo() ) : ?>
 				<?php if ( is_home() || is_front_page() ) : ?>
 					<h1 class="site-title_img"><?php the_custom_logo(); ?></h1>
 				<?php else : ?>
