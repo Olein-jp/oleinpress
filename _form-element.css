@@ -1,0 +1,43 @@
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; *vertical-align: middle; }
+
+button, input { line-height: normal; }
+
+button, html input[type="button"] { border: 1px solid transparent; background: #666; cursor: pointer; -webkit-appearance: button; padding: 10px 20px; color: #FFF; }
+
+input[type="reset"], input[type="submit"] { border: 1px solid transparent; background: #666; cursor: pointer; -webkit-appearance: button; padding: 10px 20px; color: #FFF; }
+
+button:hover, html input[type="button"]:hover { background: #606060; }
+
+input[type="reset"]:hover, input[type="submit"]:hover { background: #606060; }
+
+button:focus, html input[type="button"]:focus { background: #606060; }
+
+input[type="reset"]:focus, input[type="submit"]:focus { background: #606060; }
+
+button:active, html input[type="button"]:active { background: #606060; }
+
+input[type="reset"]:active, input[type="submit"]:active { background: #606060; }
+
+.button { padding: 10px 20px; display: inline-block; *display: inline; }
+
+input[type="checkbox"], input[type="radio"] { -webkit-box-sizing: border-box; box-sizing: border-box; padding: 0; }
+
+input[type="search"] { -webkit-appearance: textfield; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+
+button::-moz-focus-inner { border: 0; padding: 0; }
+
+input::-moz-focus-inner { border: 0; padding: 0; }
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], input[type="tel"], input[type="number"] { background: #FAFAFA; color: #666; border: 1px solid #ccc; border-radius: 0px; padding: 10px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; }
+
+textarea { background: #FAFAFA; color: #666; border: 1px solid #ccc; border-radius: 0px; padding: 10px 15px; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; max-width: 100%; }
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="tel"]:focus, input[type="search"]:focus, input[type="number"]:focus { color: #111; background: #FFF; }
+
+textarea { overflow: auto; vertical-align: top; width: 100%; }
+
+textarea:focus { color: #111; background: #FFF; }
+
+input[type="file"] { max-width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }

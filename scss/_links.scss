@@ -1,0 +1,15 @@
+a {
+	background-color: transparent;
+	-webkit-text-decoration-skip: objects;
+	&:active,
+	&:hover {
+		outline-width: 0;
+		color: $link-active-color;
+		transition: .3s;
+	}
+	&:visited {
+		outline: inherit;
+		color: $link-visited-color;
+		transition: .3s;
+	}
+}
