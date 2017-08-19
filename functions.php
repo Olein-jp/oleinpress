@@ -154,6 +154,7 @@ function oleinpress_scripts() {
 	wp_enqueue_style( 'FontAwesome', get_template_directory_uri() . '/fonts/fontawesome/css/font-awesome.min.css' );
 
 	wp_enqueue_style( 'noto-sans-jp', '//fonts.googleapis.com/earlyaccess/notosansjp.css' );
+
 	wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Roboto:400,700' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

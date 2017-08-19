@@ -191,7 +191,7 @@ a {
 // 	display: table;
 // 	clear: both;
 // }
-// 
+//
 // .clear:after,
 // .entry-content:after,
 // .comment-content:after,
@@ -212,7 +212,7 @@ a {
 // 	position: relative;
 }
 #primary {
-	
+
 }
 
 .content-area {
@@ -240,7 +240,7 @@ a {
 }
 
 #secondary {
-	
+
 }
 
 .sidebar {
@@ -310,7 +310,7 @@ a {
 					background: white;
 					color: $brand-color;
 				}
-			}	
+			}
 		}
 	}
 }
@@ -473,9 +473,9 @@ a {
 		width: 50px;
 	  height: 50px;
 	  background: rgba($brand-color, .95);
-	  
+
 	  border: 1px solid white;
-		
+
   	display: inline-block;
 	  transition: all .4s;
 	  span {
@@ -569,13 +569,13 @@ a {
 /* Page: 404
 ------------------------------*/
 .error-404 {
-	
+
 }
 
 /* Page: Search
 ------------------------------*/
 .search-results {
-	
+
 }
 
 /* Index
@@ -638,7 +638,7 @@ a {
 // 	border-bottom: 1px solid lighten($text-color, 70%);
 	@include clearfix();
 	&-content {
-		
+
 	}
 	&.sticky {
 		padding: 30px;
@@ -1074,7 +1074,7 @@ a {
 					text-align: center;
 					color: lighten($text-color, 40%);
 					border: none;
-				}	
+				}
 			}
 		}
 		tfoot {

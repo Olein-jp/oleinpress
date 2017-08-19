@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * OleinPress
  *
  * file name : 404.php

@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * OleinPress
  *
  * file name : page.php
@@ -12,11 +12,12 @@
 ?>
 <?php get_header(); ?>
 	<main id="primary" class="content-area">
-		<?php while ( have_posts() ): the_post(); ?>
+		<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
 		<article id="post-<?php the_id(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1>
-				<?php if ( has_post_thumbnail() ): ?>
+				<?php if ( has_post_thumbnail() ) : ?>
 				<figure class="entry-thumbnail">
 					<?php the_post_thumbnail(); ?>
 				</figure>
@@ -28,7 +29,6 @@
 		</article>
 		<?php
 			endwhile;
-		
 			the_post_navigation();
 		?>
 	</main>

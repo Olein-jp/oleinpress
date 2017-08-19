@@ -1,6 +1,6 @@
 <?php
 /**
- * 
+ *
  * OleinPress
  *
  * file name : footer.php
@@ -13,7 +13,7 @@
 </div>
 <footer class="site-footer">
 	<div class="container">
-		<?php if ( ! is_active_sidebar( 'footer-left' ) ){ return; } else { ?>
+		<?php if ( ! is_active_sidebar( 'footer-left' ) ) { return; } else { ?>
 		<div class="site-footer-leftbox">
 		<?php dynamic_sidebar( 'footer-left' ); ?>
 		</div>
