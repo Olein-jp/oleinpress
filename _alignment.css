@@ -1,7 +1,0 @@
-.alignleft { display: inline; float: left; margin-right: 1.5em; }
-
-.alignright { display: inline; float: right; margin-left: 1.5em; }
-
-.aligncenter { clear: both; display: block; margin: 0 auto; }
-
-.size-auto, .size-full, .size-large, .size-medium, .size-thumbnail { max-width: 100%; height: auto; }
