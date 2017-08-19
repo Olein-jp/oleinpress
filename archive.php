@@ -1,56 +1,51 @@
 <?php
 /**
- * 
- * OleinPress
+ * The template for displaying archive pages
  *
- * file name : archive.php
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * created   : 2017/08/01
- *
- * @package OleinPress
+ * @package oleinpress
  */
-?>
-<?php get_header(); ?>
-<div class="container container_content">
-	<main id="primary" class="content-area">
-		<?php if ( have_posts() ) : while ( have_posts() ): the_post(); ?>
-		<article id="post-<?php the_id(); ?>" <?php post_class( 'list-item' ); ?>>
-			<?php if ( has_post_thumbnail() ): ?>
-			<figure class="entry-thumbnail">
-				<a href="<?php the_permalink(); ?>" rel="bookmark">
-				<?php the_post_thumbnail( 'olenpress-blog-thumbnail' ); ?>
-				</a>
-			</figure>
-			<?php endif; ?>
-			<div class="list-item-content">
-				<div class="entry-meta">
-					<?php the_category(' / '); ?>
-				</div>
-				<header class="entry-header">
-					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-				</header>
-				<div class="entry-excerpt">
-					<?php the_excerpt(); ?>
-					<?php
-						wp_link_pages( array(
-							'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'oleinpress' ),
-							'after'  => '</div>',
-						) );
-					?>
-				</div>
-			</div>
-		</article>
+
+get_header(); ?>
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main">
+
 		<?php
+		if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<?php
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="archive-description">', '</div>' );
+				?>
+			</header><!-- .page-header -->
+
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+
+				/*
+				 * Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', get_post_format() );
+
 			endwhile;
-			
-			the_posts_navigation( array(
-				'prev_text' => esc_html__( 'Older', 'oleinpress' ),
-				'next_text' => esc_html__( 'Newer', 'oleinpress' ),
-			));
-			
-			endif;
-		?>
-	</main>
-	<?php get_sidebar(); ?>
-</div>
-<?php get_footer(); ?>
+
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();

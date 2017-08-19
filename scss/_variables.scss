@@ -1,0 +1,41 @@
+//======================================================================
+// brand
+//======================================================================
+$brand-primary: #1e4663 !default;
+$brand-secondary: #702E2D !default;
+
+//======================================================================
+// links
+//======================================================================
+$link-color: #2375B0 !default;
+$link-decoration: none !default;
+$link-hover-color: darken( $link-color, 15% ) !default;
+$link-hover-decoration: underline !default;
+
+//======================================================================
+// white & black
+//======================================================================
+$white:  #fff !default;
+$gray-10: #f8f9fa !default;
+$gray-20: #e9ecef !default;
+$gray-30: #dee2e6 !default;
+$gray-40: #ced4da !default;
+$gray-50: #adb5bd !default;
+$gray-60: #868e96 !default;
+$gray-70: #495057 !default;
+$gray-80: #343a40 !default;
+$gray-90: #212529 !default;
+$black:  #000 !default;
+
+//======================================================================
+// Margin & Padding point
+//======================================================================
+$margin: 15px !default;
+$margin-2: $margin * 2 !default;
+$margin-4: $margin-2 * 2 !default;
+$margin-8: $margin-4 * 2 !default;
+
+$padding: 15px !default;
+$padding-2: $padding * 2 !default;
+$padding-4: $padding-2 * 2 !default;
+$padding-8: $padding-4 * 2 !default;

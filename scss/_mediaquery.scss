@@ -26,26 +26,14 @@ $breakpoint-down: (
 //
 
 
-@mixin mq-up($breakpoint: xl) {
+@mixin mq-up($breakpoint: lg) {
 	@media #{map-get($breakpoint-up, $breakpoint)}{
 		@content;
 	}
 }
 
-@mixin mq-down($breakpoint: xl) {
+@mixin mq-down($breakpoint: lg) {
 	@media #{map-get($breakpoint-down, $breakpoint)}{
 		@content;
 	}
 }
-
-//======================================================================
-// Sizes (part of layout)
-//======================================================================
-$lg-page-width: 1260px;
-$md-page-width: 920px;
-$tb-page-width: 720px;
-
-$sidebar-width: 336px;
-$margin: 40px;
-
-$large-content-width: $lg-page-width - ( $sidebar-width + $margin );

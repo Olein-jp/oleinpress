@@ -1,39 +1,34 @@
 <?php
 /**
+ * The template for displaying the footer
  *
- * OleinPress
+ * Contains the closing of the #content div and all content after.
  *
- * file name : footer.php
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * created   : 2017/08/01
- *
- * @package OleinPress
+ * @package oleinpress
  */
+
 ?>
-</div>
-<footer class="site-footer">
-	<div class="container">
-		<?php if ( ! is_active_sidebar( 'footer-left' ) ) { return; } else { ?>
-		<div class="site-footer-leftbox">
-		<?php dynamic_sidebar( 'footer-left' ); ?>
-		</div>
-		<?php } ?>
-		<?php if ( ! is_active_sidebar( 'footer-center' ) ){ return; } else { ?>
-		<div class="site-footer-centerbox">
-		<?php dynamic_sidebar( 'footer-center' ); ?>
-		</div>
-		<?php } ?>
-		<?php if ( ! is_active_sidebar( 'footer-right' ) ){ return; } else { ?>
-		<div class="site-footer-rightbox">
-		<?php dynamic_sidebar( 'footer-right' ); ?>
-		</div>
-		<?php } ?>
-	</div>
-	<div class="copyright">
-		<p>©Copyright <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'title' ); ?></a>. All Rights Reserved.</p>
-	</div>
-</footer>
-</div>
+
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer">
+		<div class="site-info">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'oleinpress' ) ); ?>"><?php
+				/* translators: %s: CMS name, i.e. WordPress. */
+				printf( esc_html__( 'Proudly powered by %s', 'oleinpress' ), 'WordPress' );
+			?></a>
+			<span class="sep"> | </span>
+			<?php
+				/* translators: 1: Theme name, 2: Theme author. */
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'oleinpress' ), 'oleinpress', '<a href="http://olein-design.com">Koji Kuno</a>' );
+			?>
+		</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
 <?php wp_footer(); ?>
+
 </body>
 </html>

@@ -1,16 +1,17 @@
 <?php
 /**
- * 
- * OleinPress
+ * The sidebar containing the main widget area
  *
- * file name : sidebar.php
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * created   : 2017/08/01
- *
- * @package OleinPress
+ * @package oleinpress
  */
+
+if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+	return;
+}
 ?>
-<aside id="secondary" class="sidebar" role="complementary">
-	<?php if ( ! is_active_sidebar( 'sidebar-1' ) ){ return; } ?>
+
+<aside id="secondary" class="widget-area">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside>
+</aside><!-- #secondary -->

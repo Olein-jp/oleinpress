@@ -1,81 +1,56 @@
 <?php
 /**
+ * The header for our theme
  *
- * OleinPress
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * file name : header.php
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * created   : 2017/08/01
- *
- * @package OleinPress
+ * @package oleinpress
  */
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
 
-<?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-<?php if ( has_nav_menu( 'header-bar' ) ) { ?>
-<div class="site-header-bar">
-<?php
-wp_nav_menu( array(
-	'theme_location'  => 'header-bar',
-	'menu_id'         => '',
-	'menu_class'      => 'site-header-bar-menu',
-	'container_class' => 'container site-header-bar__inner',
-	'depth'           => 1,
-) );
-?>
-</div>
-<?php } ?>
-<header class="site-header">
-	<a class="menu-trigger" href="#">
-	  <span></span>
-	  <span></span>
-	  <span></span>
-	</a>
-	<script>
-		jQuery(function($){
-			$('.menu-trigger').click(function(){
-				$('.oleinpress-menu').fadeToggle(400);
-				$('.menu-trigger').toggleClass('active');
-			});
-		});
-	</script>
-	<div class="container">
-		<div class="site-header__branding">
-			<?php if ( has_custom_logo() ) : ?>
-				<?php if ( is_home() || is_front_page() ) : ?>
-					<h1 class="site-title_img"><?php the_custom_logo(); ?></h1>
-				<?php else : ?>
-					<p class="site-title_img"><?php the_custom_logo(); ?></p>
-				<?php endif; ?>
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'oleinpress' ); ?></a>
+
+	<header id="masthead" class="site-header">
+		<div class="site-branding">
+			<?php
+			the_custom_logo();
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<?php else : ?>
-				<?php if ( is_home() || is_front_page() ) : ?>
-					<h1 class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title_text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php endif; ?>
-			<?php endif; ?>
-		</div>
-		<?php
-			wp_nav_menu( array(
-				'theme_location'  => 'primary',
-				'container'       => 'nav',
-				'container_class' => 'site-header__menu',
-				'menu_id'         => 'oleinpress-menu',
-				'menu_class'      => 'oleinpress-menu',
-				'depth'           => 0,
-			) );
-		?>
-	</div>
-</header>
-<?php do_action( 'oleinpress_breadcrumbs' ); ?>
-<div id="content" class="site-content">
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
+
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
+
+		<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'oleinpress' ); ?></button>
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				) );
+			?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
+
+	<div id="content" class="site-content">

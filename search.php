@@ -1,63 +1,51 @@
 <?php
 /**
- * 
- * OleinPress
+ * The template for displaying search results pages
  *
- * file name : search.php
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * created   : 2017/08/01
- *
- * @package OleinPress
+ * @package oleinpress
  */
-?>
-<?php get_header(); ?>
-	<main id="primary" class="content-area">
-		<?php if ( have_posts() ) : ?>
-		<header class="page-header">
-			<h1 class="page-title">
-				<?php printf( esc_html__( 'Search result of %s', 'oleinpress' ), '<span>' . get_search_query() . '</span>' ); ?>
-			</h1>
-		</header>
-		<?php while ( have_posts() ): the_post(); ?>
-		<article id="post-<?php the_id(); ?>" <?php post_class( 'list-item' ); ?>>
-			<?php if ( has_post_thumbnail() ): ?>
-			<figure class="entry-thumbnail">
-				<a href="<?php the_permalink(); ?>" rel="bookmark">
-				<?php the_post_thumbnail( 'olenpress-blog-thumbnail' ); ?>
-				</a>
-			</figure>
-			<?php endif; ?>
-			<div class="list-item-content">
-				<div class="entry-meta">
-					<?php the_category(' / '); ?>
-				</div>
-				<header class="entry-header">
-					<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-					<?php oleinpress_posted_on() ?>
-				</header>
-				<div class="entry-excerpt">
-					<?php the_excerpt(); ?>
-					<?php
-						wp_link_pages( array(
-							'before' => '<div class="page-links">',
-							'after'  => '</div>',
-							'link_before' => '<span class="page-links-item">',
-							'link_after' => '</span>',
-						) );
-					?>
-				</div>
-			</div>
-		</article>
+
+get_header(); ?>
+
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+
 		<?php
+		if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<h1 class="page-title"><?php
+					/* translators: %s: search query. */
+					printf( esc_html__( 'Search Results for: %s', 'oleinpress' ), '<span>' . get_search_query() . '</span>' );
+				?></h1>
+			</header><!-- .page-header -->
+
+			<?php
+			/* Start the Loop */
+			while ( have_posts() ) : the_post();
+
+				/**
+				 * Run the loop for the search to output the results.
+				 * If you want to overload this in a child theme then include a file
+				 * called content-search.php and that will be used instead.
+				 */
+				get_template_part( 'template-parts/content', 'search' );
+
 			endwhile;
 
-			the_posts_pagination( array(
-				'prev_text' => esc_html__( '<', 'oleinpress' ),
-				'next_text' => esc_html__( '>', 'oleinpress' ),
-			) );
-			
-			endif;
-		?>
-	</main>
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+			the_posts_navigation();
+
+		else :
+
+			get_template_part( 'template-parts/content', 'none' );
+
+		endif; ?>
+
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+<?php
+get_sidebar();
+get_footer();
