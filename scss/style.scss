@@ -63,12 +63,12 @@ body {
 
 html {
 	-webkit-tap-highlight-color: transparent;
-	font-size: 16px;
+	font-size: 62.5%;
 }
 
 body {
-	font-size: 62.5%;
 	color: $text-color;
+	font-size: 1rem;
 }
 
 * {
@@ -378,6 +378,7 @@ a {
 			line-height: 75px;
 			display: block;
 			font-size: 14px;
+			font-size: 1.4rem;
 			padding-right: 25px;
 			padding-left: 25px;
 			color: white;
@@ -558,6 +559,7 @@ a {
 		p {
 			text-align: center;
 			font-size: 12px;
+			font-size: 1.2rem;
 			padding: 7px 0;
 		}
 	}
@@ -598,7 +600,7 @@ a {
 .single {
 	.post {
 		margin-bottom: 50px;
-		border-bottom: 1px solid lighten($text-color, 70%);
+		// border-bottom: 1px solid lighten($text-color, 70%);
 	}
 	.entry-header {
 	 padding-bottom: 30px;
@@ -607,6 +609,7 @@ a {
 	}
 	.entry-title {
 	 font-size: 26px;
+	 font-size: 2.6rem;
 	}
 	.entry-thumbnail {
 		margin-right: 0;
@@ -660,6 +663,7 @@ a {
 }
 .entry-meta {
 	font-size: 12px;
+	font-size: 1.2rem;
 // 	font-weight: bold;
 	@include webfont();
 	letter-spacing: .02em;
@@ -673,6 +677,7 @@ a {
 .entry-title {
 	margin: 7px 0;
 	font-size: 22px;
+	font-size: 2.2rem;
 	line-height: 1.5;
 	@include webfont();
 // 	font-weight: bold;
@@ -686,12 +691,14 @@ a {
 }
 .posted-on {
 	font-size: 12px;
+	font-size: 1.2rem;
 	margin-bottom: 14px;
 }
 .entry-excerpt {
 	p {
 		margin-bottom: 0;
 		font-size: 14px;
+		font-size: 1.4rem;
 		line-height: 1.4;
 		color: lighten($text-color, 30%);
 	}
@@ -771,6 +778,7 @@ a {
 	&-item {
 		display: inline-block;
 		font-size: 15px;
+		font-size: 1.5rem;
 		padding: 5px 7px;
 		border: 1px solid lighten($text-color, 70%);
 		a {
@@ -805,6 +813,7 @@ a {
 	font-style: italic;
 	line-height: 1.35;
 	font-size: 13px;
+	font-size: 1.3rem;
 }
 
 /* WordPress Gallery
@@ -868,6 +877,7 @@ a {
   .comments-title {
     margin-bottom: 20px;
     font-size: 18px;
+		font-size: 1.8rem;
     line-height: 26px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
@@ -927,6 +937,7 @@ a {
           text-transform: uppercase;
           letter-spacing: 0.3px;
           font-size: 11px;
+					font-size: 1.1rem;
           &:hover {
 	          color: #03c4eb;
           }
@@ -946,6 +957,7 @@ a {
             text-transform: uppercase;
             letter-spacing: 1.5px;
             font-size: 14px;
+						font-size: 1.4rem;
           }
           span {
             padding: 3px 10px;
@@ -993,12 +1005,14 @@ a {
   }
   .form-allowed-tags {
     font-size: 12px;
+		font-size: 1.2rem;
     code {
       background: none;
     }
   }
   .comment-reply-title {
     font-size: 18px;
+		font-size: 1.8rem;
     letter-spacing: 1.5px;
     margin-bottom: 20px;
     text-transform: uppercase;
@@ -1008,6 +1022,7 @@ a {
   }
   label {
     font-size: 13px;
+		font-size: 1.3rem;
     text-transform: uppercase;
     letter-spacing: 1.5px;
   }
@@ -1035,6 +1050,7 @@ a {
 	}
 	&-title {
 		font-size: 16px;
+		font-size: 1.6rem;
 		@include webfont();
 		margin: 15px 0;
 		font-weight: bold;
@@ -1044,6 +1060,7 @@ a {
 		border: 1px solid lighten($text-color, 60%);
 		width: 100%;
 		font-size: 12px;
+		font-size: 1.2rem;
 		margin-bottom: 15px;
 		color: lighten($text-color, 40%);
 		outline: none;
@@ -1097,6 +1114,7 @@ a {
 			float: left;
 			width: 48%;
 			font-size: 13px;
+			font-size: 1.3rem;
 			line-height: 3em;
 			color: lighten($text-color, 40%);
 			margin-right: 4%;
@@ -1163,6 +1181,7 @@ a {
 		border: 1px solid lighten($text-color, 60%);
 		width: 100%;
 		font-size: 14px;
+		font-size: 1.4rem;
 		padding: 10px;
 		margin-bottom: 5px;
 		color: lighten($text-color, 40%);
@@ -1174,6 +1193,7 @@ a {
 		color: white;
 		padding: 1em;
 		font-size: 14px;
+		font-size: 1.4rem;
 	}
 }
 
@@ -1196,6 +1216,7 @@ a {
 	background: $gray-lightest;
 	line-height: 40px;
 	font-size: 12px;
+	font-size: 1.2rem;
 // 	border-bottom: 1px solid lighten($text-color, 70%);
 	span {
 		margin-right: 5px;
