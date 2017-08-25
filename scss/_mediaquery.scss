@@ -3,16 +3,14 @@
 //======================================================================
 $breakpoint-up: (
 	'sp': 'screen and (min-width: 768px)',
-	'tb': 'screen and (min-width: 940px)',
-	'md': 'screen and (min-width: 1000px)',
-	'lg': 'screen and (min-width: 1300px)',
+	'tb': 'screen and (min-width: 992px)',
+	'pc': 'screen and (min-width: 1200px)',
 ) !default;
 
 $breakpoint-down: (
 	'sp': 'screen and (max-width: 767px)',
-	'tb': 'screen and (max-width: 939px)',
-	'md': 'screen and (max-width: 999px)',
-	'lg': 'screen and (max-width: 1299px)',
+	'tb': 'screen and (max-width: 991px)',
+	'pc': 'screen and (max-width: 1199px)',
 ) !default;
 
 //
@@ -20,8 +18,7 @@ $breakpoint-down: (
 // -------------------------
 // sp : smartphone
 // tb : tablet
-// md : medium
-// lg : large
+// pc : Personal Computer
 // -------------------------
 //
 
@@ -37,3 +34,11 @@ $breakpoint-down: (
 		@content;
 	}
 }
+
+//======================================================================
+// Size
+//======================================================================
+$page-width-lg:   1170px !default;
+$page-width-pc-tb: 970px !default;
+$page-width-tb-sp: 750px !default;
+$page-width-sp:    100% !default;

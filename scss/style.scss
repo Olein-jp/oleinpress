@@ -21,6 +21,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 //======================================================================
 @import "variables";
 @import "mediaquery";
+@import "mixin";
 
 
 /*--------------------------------------------------------------
@@ -34,6 +35,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 	form reset
 --------------------------------------------------------------*/
 @import "reset/input";
+
+/*--------------------------------------------------------------
+	FontAwesome
+--------------------------------------------------------------*/
+@import "fontawesome/font-awesome";
 
 /*--------------------------------------------------------------
 	Base
@@ -83,13 +89,238 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 	Main Navigation
 --------------------------------------------------------------*/
+@import "main-navigation";
 
+/*--------------------------------------------------------------
+	Breadcrumb
+--------------------------------------------------------------*/
+@import "breadcrumb";
 
 /*--------------------------------------------------------------
 	Content
 --------------------------------------------------------------*/
 .sticky {
 	display: block;
+}
+
+.post {
+	margin: 0 0 2em;
+}
+
+.posted-on .updated {
+	display: none;
+}
+
+.byline {
+	display: inline-block;
+}
+
+.post-content,
+.entry-content,
+.entry-summary {
+	margin: 2px 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+	Media
+--------------------------------------------------------------*/
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	position:relative;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto 0;
+	max-width: 100%;
+}
+.wp-caption .wp-caption-text {
+	font-size: 75%;
+	padding-top: 5px;
+	opacity: 0.8;
+}
+
+.wp-caption img {
+	position: relative;
+	vertical-align: bottom;
+}
+
+/*--------------------------------------------------------------
+	Gallery
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+	Comment
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {}
+
+.comment,
+.comment-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.comment-author-info {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align:middle;
+}
+
+.comment-meta .avatar {
+	float: left;
+	margin-right: 10px;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.comment-author cite {
+	font-style: normal;
+	font-weight: bold;
+}
+
+.entry-meta.comment-metadata {
+	margin-top: 0;
+}
+
+.comment-content {
+	margin-top: 1.5em;
+}
+
+.comment-respond {
+	margin-top: 1.5em;
+}
+.comment-form > .form-submit {
+	margin-bottom: 0;
+}
+
+.comment-form input,
+.comment-form-comment {
+	margin-bottom: 10px;
+}
+
+.comment-form #author,
+.comment-form #email,
+.comment-form #url {
+	display: block;
+}
+
+.comment-metadata .edit-link:before {
+	display: none;
+}
+
+.comment-body {
+	padding: 30px 0;
+}
+
+.comment-content {
+	padding: 30px;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.depth-1.parent > .children {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.comment .children {
+	padding-left: 30px;
+	margin-top: -30px;
+	border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pingback .comment-body,
+.trackback .comment-body {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pingback .edit-link {
+	font-size: 13px;
+}
+
+.comment-content p:last-child {
+	margin-bottom: 0;
+}
+
+.comment-list > .comment:first-child {
+	padding-top:0;
+	margin-top:0;
+	border-top: 0;
+}
+
+ol.comment-list {
+	margin-bottom: 1.5em;
 }
 
 /*--------------------------------------------------------------
@@ -117,7 +348,295 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .widget_categories .children li:last-child {
 	padding-bottom: 0;
 }
+/*--------------------------------------------------------------
+	Layout
+--------------------------------------------------------------*/
+.container {
+	width: $page-width-lg;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down(pc){
+		width: $page-width-pc-tb;
+	}
+	@include mq-down(tb){
+		width: $page-width-tb-sp;
+	}
+	@include mq-down(sp){
+		width: $page-width-sp;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+.content-area {
+	width: 800px;
+	float: left;
+	@include mq-down(pc){
+		width: 600px;
+	}
+	@include mq-down(tb){
+		width: 100%;
+	}
+}
+
+.widget-area {
+	float: right;
+	width: 336px;
+	@include mq-down(tb){
+		width: 100%;
+	}
+}
 
 /*--------------------------------------------------------------
 	Custom CSS
 --------------------------------------------------------------*/
+/* site-header
+------------------------------*/
+.site-header {
+
+}
+
+.site-branding {
+	background: $brand-primary;
+	&__inner {
+		padding: 30px 0;
+	}
+}
+
+.site-title {
+	font-size: 3.6rem;
+	letter-spacing: .05em;
+	line-height: 1em;
+	margin-bottom: 0;
+	a {
+		text-decoration: none;
+		color: white;
+	}
+}
+
+.site-description {
+	color: $gray-50;
+	font-size: 1.6rem;
+	margin-bottom: 0;
+}
+
+/* site-content
+------------------------------*/
+.site-content {
+	&__inner {
+		@include clearfix();
+	}
+}
+
+/* site-footer
+------------------------------*/
+.site-footer {
+
+}
+
+/* commons
+------------------------------*/
+body {
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+pre {
+	background: rgba(0,0,0, 0.05);
+	font-family: inherit;
+	font-size: inherit;
+	line-height: normal;
+	margin-bottom: 1.5em;
+	padding: 20px;
+	overflow: auto;
+	max-width: 100%;
+}
+
+blockquote {
+	border-left: 5px solid rgba(0,0,0, .05);
+	padding: 20px;
+	font-size: 1.2em;
+	font-style: italic;
+	margin: 0 0 1.5em;
+	position: relative;
+	p {
+		&:last-child {
+			margin: 0;
+		}
+	}
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(0,0,0, .1);
+}
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+	border-width: 1px 0 0 1px;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th,
+td {
+	padding: 8px;
+}
+th {
+	border-width: 0 1px 1px 0;
+}
+td {
+	border-width: 0 1px 1px 0;
+}
+
+hr {
+	background-color: rgba(0,0,0, .1);
+	border: 0;
+	height: 1px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+fieldset {
+	padding: 0;
+	margin: 0;
+	min-width: inherit;
+	legend {
+		padding: 0;
+		margin-bottom: 1.5em;
+	}
+}
+
+.siite-main .gakkery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	img {
+		vertical-align: bottom;
+	}
+}
+
+.galery-icon {
+	padding: 5px;
+}
+
+h1 {
+	font-size: 35px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+h2 {
+	font-size: 25px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+h3 {
+	font-size: 20px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+}
+h4,
+h5,
+h6 {
+	margin-bottom: 20px;
+}
+
+/* widget styling
+------------------------------*/
+.sidebar .widget *:last-child {
+	margin-bottom: 0;
+}
+.widget {
+
+}
+.widget-title {
+	font-size: 20px;
+	margin-bottom: 30px;
+	line-height: 1.5;
+}
+.widget {
+	ul,ol {
+		margin: 0;
+	}
+	ul {
+		li {
+			list-style-type: none;
+			position: relative;
+			padding-bottom: 5px;
+			&.menu-item-has-children,
+			&.page_item_has_children {
+				padding-bottom: 0;
+			}
+			ul {
+				li {
+					&:before {
+						opacity: .7;
+					}
+				}
+			}
+		}
+	}
+	.search-field {
+		width: 100%;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.widget_nav_menu ul ul,
+.widget_pages ul ul {
+	margin-left: 1em;
+	margin-top: 5px;
+}
+
+#wp-calendar {
+	table-layout: fixed;
+	font-size: 80%;
+	#prev,
+	#prev + .pad {
+		border-right: 0;
+	}
+}
+
+
+/* posts
+------------------------------*/
+.entry-title {
+	margin-bottom: 0;
+}
+
+.entry-header {
+	word-wrap: break-word;
+}
+
+.page-header {
+	margin-bottom: 30px;
+	h1 {
+		font-size: 25px;
+	}
+}
+
+.entry-meta {
+	font-size: 85%;
+	margin-top: .5em;
+	line-height: 1.5;
+}
+.entry-footer {
+	margin-top: 2em;
+}
+
+// .post {
+// 	margin-bottom: 50px;
+// }
