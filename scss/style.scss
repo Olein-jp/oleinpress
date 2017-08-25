@@ -308,6 +308,7 @@ object {
 
 .comment-content {
 	margin-top: 1.5em;
+	margin-bottom: 1em;
 }
 
 .comment-respond {
@@ -372,6 +373,17 @@ object {
 
 ol.comment-list {
 	margin-bottom: 1.5em;
+}
+
+.reply {
+
+}
+
+.comment-reply-link {
+	display: inline-block;
+	background: $link-color;
+	color: #fff;
+	padding: 7px 15px;
 }
 
 /*--------------------------------------------------------------

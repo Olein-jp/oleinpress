@@ -24,7 +24,8 @@ html input[type="button"] {
 }
 
 input {
-  &[type="reset"], &[type="submit"] {
+  &[type="reset"],
+	&[type="submit"] {
     border: 1px solid transparent;
     background: #666;
     cursor: pointer;
@@ -122,7 +123,8 @@ input {
   }
 }
 
-textarea {
+textarea,
+select {
   background: #FAFAFA;
   color: #666;
   border: 1px solid #ccc;
@@ -147,11 +149,13 @@ input {
   }
 }
 
+textarea:focus,
+select:focus {
+  color: #111;
+  background: #FFF;
+}
+
 textarea {
-  &:focus {
-    color: #111;
-    background: #FFF;
-  }
   overflow: auto;
   vertical-align: top;
   width: 100%;
