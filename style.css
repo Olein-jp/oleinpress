@@ -3760,7 +3760,14 @@ input[type="file"] {
 }
 
 .post {
-  margin: 0 0 2em;
+  margin: 0 0 75px;
+}
+
+.posted-on,
+.byline,
+.cat-links,
+.comments-link {
+  margin-right: 15px;
 }
 
 .posted-on .updated {
@@ -3933,6 +3940,29 @@ object {
   right: 0;
   line-height: 1;
   margin-top: -0.5em;
+}
+
+/*--------------------------------------------------------------
+	Pagenation
+--------------------------------------------------------------*/
+.pagination {
+  clear: both;
+  margin: 50px 0;
+}
+
+.nav-links {
+  text-align: center;
+}
+
+.page-numbers {
+  display: inline-block;
+  padding: 7px;
+  line-height: 1;
+}
+
+.page-numbers.current {
+  background: #1e4663;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -4175,6 +4205,21 @@ ol.comment-list {
 
 /* site-footer
 ------------------------------*/
+.site-footer {
+  background: #1e4663;
+  padding: 15px 0;
+  color: #fff;
+}
+
+.copyright-bar p {
+  margin-bottom: 0;
+}
+
+.copyright-bar a {
+  color: #fff;
+  text-decoration: underline;
+}
+
 /* commons
 ------------------------------*/
 body {
@@ -4364,11 +4409,13 @@ h6 {
 }
 
 .page-header {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .page-header h1 {
-  font-size: 25px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .entry-meta {
@@ -4378,5 +4425,6 @@ h6 {
 }
 
 .entry-footer {
+  font-size: 85%;
   margin-top: 2em;
 }

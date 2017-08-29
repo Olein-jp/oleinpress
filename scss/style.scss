@@ -104,7 +104,14 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .post {
-	margin: 0 0 2em;
+	margin: 0 0 75px;
+}
+
+.posted-on,
+.byline,
+.cat-links,
+.comments-link {
+	margin-right: 15px;
 }
 
 .posted-on .updated {
@@ -263,6 +270,28 @@ object {
 		right: 0;
 		line-height: 1;
 		margin-top: -0.5em;
+	}
+}
+
+/*--------------------------------------------------------------
+	Pagenation
+--------------------------------------------------------------*/
+.pagination {
+	clear: both;
+	margin: 50px 0;
+}
+
+.nav-links {
+	text-align: center;
+}
+
+.page-numbers {
+	display: inline-block;
+	padding: 7px;
+	line-height: 1;
+	&.current {
+		background: $brand-primary;
+		color: #fff;
 	}
 }
 
@@ -494,7 +523,22 @@ ol.comment-list {
 /* site-footer
 ------------------------------*/
 .site-footer {
+	background: $brand-primary;
+	padding: 15px 0;
+	color: #fff;
+	&__inner {
 
+	}
+}
+
+.copyright-bar {
+	p {
+		margin-bottom: 0;
+	}
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
 }
 
 /* commons
@@ -685,9 +729,11 @@ h6 {
 }
 
 .page-header {
-	margin-bottom: 30px;
+	margin-top: 30px;
+	margin-bottom: 50px;
 	h1 {
-		font-size: 25px;
+		font-size: 30px;
+		text-align: center;
 	}
 }
 
@@ -697,6 +743,7 @@ h6 {
 	line-height: 1.5;
 }
 .entry-footer {
+	font-size: 85%;
 	margin-top: 2em;
 }
 
