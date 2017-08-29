@@ -4168,7 +4168,6 @@ ol.comment-list {
 @media screen and (max-width: 991px) {
   .widget-area {
     width: 100%;
-    margin-bottom: 0;
   }
 }
 
@@ -4182,7 +4181,8 @@ ol.comment-list {
 }
 
 .site-branding__inner {
-  padding: 30px 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .site-title {
