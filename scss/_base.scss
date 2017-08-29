@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	//font-family: sans-serif;
+	line-height: 1.15;
+	font-size: 62.5%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-ms-overflow-style: scrollbar;
+	-webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+
+body {
+	margin: 0;
+	font-family: "Lato", -apple-system, 'BlinkMacSystemFont', "Helvetica Neue", Helvetica, Arial, "Hiragino Sans", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.7;
+	color: #000;
+	text-align: left;
+	background-color: #fff;
+}
+
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	&:hover {
+		color: $link-hover-color;
+		text-decoration: $link-hover-decoration;
+	}
+	&:active,
+	&:focus {
+		color: $link-active-color
+	}
+	&:visited {
+		color: $link-visited-color;
+	}
+}
