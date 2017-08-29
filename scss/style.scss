@@ -111,7 +111,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .byline,
 .cat-links,
 .comments-link {
-	margin-right: 15px;
+	margin-right: 8px;
 }
 
 .posted-on .updated {
@@ -225,7 +225,8 @@ object {
 /*--------------------------------------------------------------
 	Post navigation
 --------------------------------------------------------------*/
-.post-navigation {
+.post-navigation,
+.posts-navigation {
 	clear: both;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -245,6 +246,7 @@ object {
 	float: left;
 	position: relative;
 	padding-left: 20px;
+	text-align: left;
 	&::before {
 		position: absolute;
 		display: block;
@@ -408,6 +410,10 @@ ol.comment-list {
 
 }
 
+.bypostauthor {
+	display: inline;
+}
+
 .comment-reply-link {
 	display: inline-block;
 	background: $link-color;
@@ -474,8 +480,10 @@ ol.comment-list {
 .widget-area {
 	float: right;
 	width: 336px;
+	margin-bottom: 50px;
 	@include mq-down(tb){
 		width: 100%;
+		margin-bottom: 0;
 	}
 }
 
@@ -726,6 +734,7 @@ h6 {
 
 .entry-header {
 	word-wrap: break-word;
+	margin-bottom: 1.5em;
 }
 
 .page-header {

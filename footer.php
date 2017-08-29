@@ -16,7 +16,7 @@
 	<footer id="colophon" class="site-footer">
 		<div class="site-footer__inner container">
 			<div class="copyright-bar">
-				<p>Copyright © <?php bloginfo( 'blogname' ); ?> by
+				<p>Copyright &copy; <?php bloginfo( 'blogname' ); ?> by
 				<?php
 					printf( esc_html__( '%1$s.', 'oleinpress' ), '<a href="http://demo.olein-design.com/oleinpress/">OleinPress</a>' );
 				?>

@@ -3767,7 +3767,7 @@ input[type="file"] {
 .byline,
 .cat-links,
 .comments-link {
-  margin-right: 15px;
+  margin-right: 8px;
 }
 
 .posted-on .updated {
@@ -3884,7 +3884,8 @@ object {
 /*--------------------------------------------------------------
 	Post navigation
 --------------------------------------------------------------*/
-.post-navigation {
+.post-navigation,
+.posts-navigation {
   clear: both;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -3911,6 +3912,7 @@ object {
   float: left;
   position: relative;
   padding-left: 20px;
+  text-align: left;
 }
 
 .nav-previous::before {
@@ -4073,6 +4075,10 @@ ol.comment-list {
   margin-bottom: 1.5em;
 }
 
+.bypostauthor {
+  display: inline;
+}
+
 .comment-reply-link {
   display: inline-block;
   background: #2375B0;
@@ -4156,11 +4162,13 @@ ol.comment-list {
 .widget-area {
   float: right;
   width: 336px;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 991px) {
   .widget-area {
     width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -4406,6 +4414,7 @@ h6 {
 
 .entry-header {
   word-wrap: break-word;
+  margin-bottom: 1.5em;
 }
 
 .page-header {
