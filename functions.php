@@ -44,8 +44,8 @@ if ( ! function_exists( 'oleinpress_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'oleinpress' ),
-			'sns-menu' => esc_html__( 'SNS menu', 'oleinpress' ),
+			'header-menu' => esc_html__( 'Header menu', 'oleinpress' ),
+			//'sns-menu' => esc_html__( 'SNS menu', 'oleinpress' ),
 		) );
 
 		/*

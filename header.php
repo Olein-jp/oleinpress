@@ -24,7 +24,11 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'oleinpress' ); ?></a>
-
+	<button class="menu-toggle">
+		<span class="top"></span>
+		<span class="middle"></span>
+		<span class="bottom"></span>
+	</button>
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<div class="site-branding__inner container">
@@ -48,18 +52,24 @@
 			</div>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
+	<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 	<nav id="site-navigation" class="main-navigation">
 		<div class="main-navigation__inner container">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'oleinpress' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
+			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'oleinpress' ); ?></button> -->
+			<nav id="header-menu">
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'header-menu',
+						'container'      => '',
+						'menu_class'     => '',
+						'fallback_cb'    => 'wp_page_menu',
+						'items_wrap'     => '<ul id="header-menu-container">%3$s</ul>',
+					) );
+				?>
+			</nav>
 		</div>
 	</nav><!-- #site-navigation -->
-
+	<?php endif; ?>
 	<div class="breadcrumb">
 		<div class="breadcrumb__inner container">
 			<?php oleinpress_breadcrumbs(); ?>

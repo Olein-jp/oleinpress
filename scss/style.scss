@@ -115,7 +115,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
 
 .posted-on .updated {
-	display: none;
+	// display: none;
 }
 
 .byline {
@@ -524,6 +524,8 @@ ol.comment-list {
 ------------------------------*/
 .site-content {
 	&__inner {
+		margin-top: 30px;
+		margin-bottom: 30px;
 		@include clearfix();
 	}
 }
@@ -734,7 +736,7 @@ h6 {
 
 .entry-header {
 	word-wrap: break-word;
-	margin-bottom: 1.5em;
+	margin-bottom: 30px;
 }
 
 .page-header {
@@ -743,6 +745,22 @@ h6 {
 	h1 {
 		font-size: 30px;
 		text-align: center;
+	}
+}
+
+.archive-description {
+	p {
+		text-align: center;
+		opacity: .5;
+	}
+}
+
+.post-thumbnail {
+	margin-bottom: 15px;
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: bottom;
 	}
 }
 
