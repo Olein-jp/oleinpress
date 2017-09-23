@@ -3,7 +3,7 @@ Contributors: Koji Kuno (Olein Design)
 Requires at least: version 4.5 or higher
 Tested up to: WordPress 4.8.2
 Requires PHP: 5.2.4
-Version: 1.0.2
+Version: 1.0.3
 License: GPL v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
@@ -33,6 +33,10 @@ URL: http://fontawesome.io/license/
 Created by Dave Gandy
 
 == Changelog ==
+= 1.0.3 - Sep 24 2017 =
+* Deleted the tag of post-format on style.CSS
+* Merged some fixes by Mirucon
+
 = 1.0.2 - Sep 23 2017 =
 * Changed layout, design, menu on smartphone, and added some files for reviewing.
 
