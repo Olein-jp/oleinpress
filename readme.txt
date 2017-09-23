@@ -1,32 +1,36 @@
 === oleinpress ===
-
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 4.5 or higher
-Tested up to: 4.8.2
+Contributors: Koji Kuno (Olein Design)
+Requires at least: version 4.5 or higher
+Tested up to: WordPress 4.8.2
 Requires PHP: 5.2.4
+Version: 1.0.2
 License: GPL v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, two-columns, right-sidebar, translation-ready, flexible-header, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
-
-Here is Demo. http://demo.olein-design.com/oleinpress
+Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
 
 == Description ==
+A simple designed WordPress theme - OleinPress. It doesn't have much functions on condition that this theme was made for customizing with child theme.
 
-Description
+See the Demo. http://demo.olein-design.com/oleinpress
 
-== Installation ==
+The theme is developing on GitHub: https://github.com/Olein-jp/oleinpress
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+= Author information =
+The OleinPress theme is designed and created by Koji Kuno (Olein Design) in Japan. English available.
+WordPress.org Profile: https://profiles.wordpress.org/olein/
+Twitter: @Olein_jp
+Email: info@olein-design.com
 
-== Frequently Asked Questions ==
+== Copyright ==
+WordPress WordPress Theme, Copyright 2017 Koji Kuno
+The OleinPress theme is distributed 100% under the GNU General Public License v2.0.
+URL: http://www.gnu.org/licenses/gpl-2.0.html
 
-= Does this theme support any plugins? =
-
-oleinpress includes support for Infinite Scroll in Jetpack.
+FontAwesome License
+Font License - SIL OFL 1.1
+Code License - MIT License
+URL: http://fontawesome.io/license/
+Created by Dave Gandy
 
 == Changelog ==
 
