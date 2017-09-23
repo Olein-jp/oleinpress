@@ -92,9 +92,17 @@ add_action( 'after_setup_theme', 'oleinpress_setup' );
  * @global int $content_width
  */
 function oleinpress_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'oleinpress_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'oleinpress_content_width', 800 );
 }
 add_action( 'after_setup_theme', 'oleinpress_content_width', 0 );
+
+/**
+ * Registers an editor stylesheet for the theme.
+ */
+function oleinpress_add_editor_styles() {
+    add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'oleinpress_add_editor_styles' );
 
 /**
  * Register widget area.
@@ -123,8 +131,6 @@ function oleinpress_scripts() {
 	wp_enqueue_script( 'oleinpress-navigation', get_template_directory_uri() . '/js/main-navigation.js', array( 'jquery' ), null, true );
 
 	wp_enqueue_script( 'oleinpress-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	//wp_enqueue_style( 'oleinpress-google-fonts', '//fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

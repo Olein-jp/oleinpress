@@ -4,12 +4,12 @@ Theme Name: OleinPress
 Theme URI: http://demo.olein-design.com/oleinpress/
 Author: Koji Kuno
 Author URI: http://olein-design.com
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+Description: A simple designed WordPress theme - OleinPress. It doesn't have much functions on condition that this theme was made for customizing with child theme.
+Version: 1.0.2
+License: GPL v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: oleinpress
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -3652,6 +3652,13 @@ input[type="file"] {
   display: block;
 }
 
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+  max-width: 100%;
+}
+
 /*--------------------------------------------------------------
 	Main Navigation
 --------------------------------------------------------------*/
@@ -3921,41 +3928,6 @@ input[type="file"] {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-	Media
---------------------------------------------------------------*/
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-  border: none;
-  margin-bottom: 0;
-  margin-top: 0;
-  padding: 0;
-}
-
-.wp-caption {
-  margin-bottom: 1.5em;
-  max-width: 100%;
-  position: relative;
-}
-
-.wp-caption img[class*="wp-image-"] {
-  display: block;
-  margin: 0 auto 0;
-  max-width: 100%;
-}
-
-.wp-caption .wp-caption-text {
-  font-size: 75%;
-  padding-top: 5px;
-  opacity: 0.8;
-}
-
-.wp-caption img {
-  position: relative;
-  vertical-align: bottom;
 }
 
 /*--------------------------------------------------------------

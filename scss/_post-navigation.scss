@@ -1,0 +1,49 @@
+.post-navigation,
+.posts-navigation {
+	clear: both;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.nav-links {
+	@include clearfix();
+}
+.nav-previous,
+.nav-next {
+	display: block;
+	width: 45%;
+	a {
+		display: inline-block;
+	}
+}
+.nav-previous {
+	float: left;
+	position: relative;
+	padding-left: 20px;
+	text-align: left;
+	&::before {
+		position: absolute;
+		display: block;
+		font-family: FontAwesome;
+		content: "\f104";
+		top: 50%;
+		left: 0;
+		line-height: 1;
+		margin-top: -0.5em;
+	}
+}
+.nav-next {
+	float: right;
+	position: relative;
+	padding-right: 20px;
+	text-align: right;
+	&::after {
+		position: absolute;
+		display: block;
+		font-family: FontAwesome;
+		content: "\f105";
+		top: 50%;
+		right: 0;
+		line-height: 1;
+		margin-top: -0.5em;
+	}
+}

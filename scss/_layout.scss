@@ -1,0 +1,36 @@
+.container {
+	width: $page-width-lg;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq-down(pc){
+		width: $page-width-pc-tb;
+	}
+	@include mq-down(tb){
+		width: $page-width-tb-sp;
+	}
+	@include mq-down(sp){
+		width: $page-width-sp;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+}
+
+.content-area {
+	width: 800px;
+	float: left;
+	@include mq-down(pc){
+		width: 600px;
+	}
+	@include mq-down(tb){
+		width: 100%;
+	}
+}
+
+.widget-area {
+	float: right;
+	width: 336px;
+	margin-bottom: 50px;
+	@include mq-down(tb){
+		width: 100%;
+	}
+}

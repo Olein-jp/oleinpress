@@ -1,0 +1,33 @@
+.sticky {
+	display: block;
+}
+
+.post {
+	margin: 0 0 75px;
+}
+
+.posted-on,
+.byline,
+.cat-links,
+.comments-link {
+	margin-right: 8px;
+}
+
+.posted-on .updated {
+	// display: none;
+}
+
+.byline {
+	display: inline-block;
+}
+
+.post-content,
+.entry-content,
+.entry-summary {
+	margin: 2px 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}

@@ -1,0 +1,210 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WordPress Blank Pot v1.0.0\n"
+"Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
+"POT-Creation-Date: 2017-09-23 15:30+0900\n"
+"PO-Revision-Date: \n"
+"Language-Team: Your Team <translations@example.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Textdomain-Support: yesX-Generator: Poedit 1.6.4\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;esc_html_e;esc_html_x:1,2c;esc_html__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_attr__;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"_x:1,2c;_n:1,2;_n_noop:1,2;__ngettext:1,2;__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 2.0.4\n"
+"Last-Translator: \n"
+"Language: ja_JP\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:17
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "おっとっと。お探しのページは見つかりませんでした。"
+
+#: 404.php:21
+msgid ""
+"It looks like nothing was found at this location. Maybe try one of the links "
+"below or a search?"
+msgstr ""
+"ここでは何も見つかりませんでした。下記リンクのいずれかを試すか、検索を使用し"
+"てみてはいかがですか？"
+
+#: 404.php:30
+msgid "Most Used Categories"
+msgstr "よく使われているカテゴリー"
+
+#: 404.php:47
+#, php-format
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "月別アーカイブをご確認ください。 %1$s"
+
+#: comments.php:34
+#, php-format
+msgid "One thought on &ldquo;%1$s&rdquo;"
+msgstr "&ldquo;%s&rdquo; への1件のコメント"
+
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "%1$s の %2$s に対する意見"
+
+#: comments.php:63
+msgid "Comments are closed."
+msgstr "この記事へのコメントはできません。"
+
+#: footer.php:19
+msgid "OleinPress WordPress theme by "
+msgstr ""
+
+#: footer.php:19
+msgid "http://olein-design.com"
+msgstr ""
+
+#: footer.php:19
+msgid "Olein Design"
+msgstr ""
+
+#: functions.php:47
+msgid "Header menu"
+msgstr "ヘッダーメニュー"
+
+#: functions.php:114
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: functions.php:116
+msgid "Add widgets here."
+msgstr "ウィジェットを追加"
+
+#: header.php:26
+msgid "Skip to content"
+msgstr "コンテンツをスキップ"
+
+#: header.php:58
+msgid "Primary Menu"
+msgstr ""
+
+#: inc/breadcrumb.php:13
+msgid "Home"
+msgstr ""
+
+#: inc/breadcrumb.php:14
+#, php-format
+msgid "Archive by Category \"%s\""
+msgstr "“%s” カテゴリーの過去記事一覧"
+
+#: inc/breadcrumb.php:15
+#, php-format
+msgid "Archive for \"%s\""
+msgstr "“%s” の過去記事"
+
+#: inc/breadcrumb.php:16
+#, php-format
+msgid "Search Results for \"%s\" Query"
+msgstr "“%s” の検索結果"
+
+#: inc/breadcrumb.php:17
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr "“%s” タグのついた記事"
+
+#: inc/breadcrumb.php:18
+#, php-format
+msgid "Articles Posted by %s"
+msgstr "“%s” の過去記事"
+
+#: inc/breadcrumb.php:19
+msgid "Error 404"
+msgstr "エラー404"
+
+#: inc/breadcrumb.php:122
+msgid "Page"
+msgstr ""
+
+#: inc/breadcrumb.php:148 inc/breadcrumb.php:177 inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr "投稿日: %s"
+
+#: inc/breadcrumb.php:153 inc/breadcrumb.php:182 inc/template-tags.php:35
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr "著者: %s"
+
+#: inc/breadcrumb.php:197 inc/template-tags.php:52
+msgid ", "
+msgstr ""
+
+#: inc/breadcrumb.php:200 inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr "投稿日: %1$s"
+
+#: inc/breadcrumb.php:203 inc/template-tags.php:59
+msgctxt "list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/breadcrumb.php:206 inc/template-tags.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr "タグ: %1$s"
+
+#: inc/breadcrumb.php:215 inc/template-tags.php:72
+#, php-format
+msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
+msgstr "%s にコメントを残す"
+
+#: inc/breadcrumb.php:231 inc/template-tags.php:89
+#: template-parts/content-page.php:35
+#, php-format
+msgid "Edit <span class=\"screen-reader-text\">%s</span>"
+msgstr "編集する  <span class=“screen-reader-text”>%s</span>"
+
+#: search.php:21
+#, php-format
+msgid "Search Results for: %s"
+msgstr "「%s」の検索結果"
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr "何も見つかりませんでした"
+
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"大変申し訳ございませんが、何も検索で該当しませんでした。少しキーワードを変え"
+"て再度お試しください。"
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr "お探しの記事が見つかりませんか？検索機能も使ってお探しください。"
+
+#: template-parts/content-page.php:22 template-parts/content.php:49
+msgid "Pages:"
+msgstr "ページ: "
+
+#: template-parts/content.php:38
+#, php-format
+msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr "続きを読む<span class=“screen-reader-text”> “%s”</span>"

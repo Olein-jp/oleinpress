@@ -4,12 +4,12 @@ Theme Name: OleinPress
 Theme URI: http://demo.olein-design.com/oleinpress/
 Author: Koji Kuno
 Author URI: http://olein-design.com
-Description: Description
-Version: 1.0.0
-License: GNU General Public License v2 or later
-License URI: LICENSE
+Description: A simple designed WordPress theme - OleinPress. It doesn't have much functions on condition that this theme was made for customizing with child theme.
+Version: 1.0.2
+License: GPL v2.0 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: oleinpress
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -99,392 +99,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /*--------------------------------------------------------------
 	Content
 --------------------------------------------------------------*/
-.sticky {
-	display: block;
-}
-
-.post {
-	margin: 0 0 75px;
-}
-
-.posted-on,
-.byline,
-.cat-links,
-.comments-link {
-	margin-right: 8px;
-}
-
-.posted-on .updated {
-	// display: none;
-}
-
-.byline {
-	display: inline-block;
-}
-
-.post-content,
-.entry-content,
-.entry-summary {
-	margin: 2px 0 0;
-}
-
-.page-links {
-	clear: both;
-	margin: 0 0 1.5em;
-}
-
-/*--------------------------------------------------------------
-	Media
---------------------------------------------------------------*/
-.page-content img.wp-smiley,
-.entry-content img.wp-smiley,
-.comment-content img.wp-smiley {
-	border: none;
-	margin-bottom: 0;
-	margin-top: 0;
-	padding: 0;
-}
-.wp-caption {
-	margin-bottom: 1.5em;
-	max-width: 100%;
-	position:relative;
-}
-.wp-caption img[class*="wp-image-"] {
-	display: block;
-	margin: 0 auto 0;
-	max-width: 100%;
-}
-.wp-caption .wp-caption-text {
-	font-size: 75%;
-	padding-top: 5px;
-	opacity: 0.8;
-}
-
-.wp-caption img {
-	position: relative;
-	vertical-align: bottom;
-}
+@import "content";
 
 /*--------------------------------------------------------------
 	Gallery
 --------------------------------------------------------------*/
-.gallery {
-	margin-bottom: 1.5em;
-}
-
-.gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
-}
-
-.gallery-columns-2 .gallery-item {
-	max-width: 50%;
-}
-
-.gallery-columns-3 .gallery-item {
-	max-width: 33.33%;
-}
-
-.gallery-columns-4 .gallery-item {
-	max-width: 25%;
-}
-
-.gallery-columns-5 .gallery-item {
-	max-width: 20%;
-}
-
-.gallery-columns-6 .gallery-item {
-	max-width: 16.66%;
-}
-
-.gallery-columns-7 .gallery-item {
-	max-width: 14.28%;
-}
-
-.gallery-columns-8 .gallery-item {
-	max-width: 12.5%;
-}
-
-.gallery-columns-9 .gallery-item {
-	max-width: 11.11%;
-}
-
-.gallery-caption {
-	display: block;
-}
-
-/* Make sure embeds and iframes fit their containers */
-embed,
-iframe,
-object {
-	max-width: 100%;
-}
+@import "gallery";
 
 /*--------------------------------------------------------------
 	Post navigation
 --------------------------------------------------------------*/
-.post-navigation,
-.posts-navigation {
-	clear: both;
-	margin-top: 50px;
-	margin-bottom: 50px;
-}
-.nav-links {
-	@include clearfix();
-}
-.nav-previous,
-.nav-next {
-	display: block;
-	width: 45%;
-	a {
-		display: inline-block;
-	}
-}
-.nav-previous {
-	float: left;
-	position: relative;
-	padding-left: 20px;
-	text-align: left;
-	&::before {
-		position: absolute;
-		display: block;
-		font-family: FontAwesome;
-		content: "\f104";
-		top: 50%;
-		left: 0;
-		line-height: 1;
-		margin-top: -0.5em;
-	}
-}
-.nav-next {
-	float: right;
-	position: relative;
-	padding-right: 20px;
-	text-align: right;
-	&::after {
-		position: absolute;
-		display: block;
-		font-family: FontAwesome;
-		content: "\f105";
-		top: 50%;
-		right: 0;
-		line-height: 1;
-		margin-top: -0.5em;
-	}
-}
+@import "post-navigation";
 
 /*--------------------------------------------------------------
 	Pagenation
 --------------------------------------------------------------*/
-.pagination {
-	clear: both;
-	margin: 50px 0;
-}
-
-.nav-links {
-	text-align: center;
-}
-
-.page-numbers {
-	display: inline-block;
-	padding: 7px;
-	line-height: 1;
-	&.current {
-		background: $brand-primary;
-		color: #fff;
-	}
-}
+@import "pagenation";
 
 /*--------------------------------------------------------------
 	Comment
 --------------------------------------------------------------*/
-.comment-content a {
-	word-wrap: break-word;
-}
-
-.bypostauthor {}
-
-.comment,
-.comment-list {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-}
-
-.comment-author-info {
-	display: inline-block;
-	*display: inline;
-	*zoom: 1;
-	vertical-align:middle;
-}
-
-.comment-meta .avatar {
-	float: left;
-	margin-right: 10px;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-}
-
-.comment-author cite {
-	font-style: normal;
-	font-weight: bold;
-}
-
-.entry-meta.comment-metadata {
-	margin-top: 0;
-}
-
-.comment-content {
-	margin-top: 1.5em;
-	margin-bottom: 1em;
-}
-
-.comment-respond {
-	margin-top: 1.5em;
-}
-.comment-form > .form-submit {
-	margin-bottom: 0;
-}
-
-.comment-form input,
-.comment-form-comment {
-	margin-bottom: 10px;
-}
-
-.comment-form #author,
-.comment-form #email,
-.comment-form #url {
-	display: block;
-}
-
-.comment-metadata .edit-link:before {
-	display: none;
-}
-
-.comment-body {
-	padding: 30px 0;
-}
-
-.comment-content {
-	padding: 30px;
-	border: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.depth-1.parent > .children {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.comment .children {
-	padding-left: 30px;
-	margin-top: -30px;
-	border-left: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.pingback .comment-body,
-.trackback .comment-body {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.pingback .edit-link {
-	font-size: 13px;
-}
-
-.comment-content p:last-child {
-	margin-bottom: 0;
-}
-
-.comment-list > .comment:first-child {
-	padding-top:0;
-	margin-top:0;
-	border-top: 0;
-}
-
-ol.comment-list {
-	margin-bottom: 1.5em;
-}
-
-.reply {
-
-}
-
-.bypostauthor {
-	display: inline;
-}
-
-.comment-reply-link {
-	display: inline-block;
-	background: $link-color;
-	color: #fff;
-	padding: 7px 15px;
-}
+@import "comment";
 
 /*--------------------------------------------------------------
 	Widgets
 --------------------------------------------------------------*/
-.widget {
-	margin: 0 0 30px;
-}
-
-/* Make sure select elements fit in widgets */
-.widget select {
-	max-width: 100%;
-}
-
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
-}
-
-/* Categories widget */
-.widget_categories .children {
-    margin-left: 1.5em;
-	padding-top: 5px;
-}
-.widget_categories .children li:last-child {
-	padding-bottom: 0;
-}
+@import "widget";
 /*--------------------------------------------------------------
 	Layout
 --------------------------------------------------------------*/
-.container {
-	width: $page-width-lg;
-	margin-right: auto;
-	margin-left: auto;
-	@include mq-down(pc){
-		width: $page-width-pc-tb;
-	}
-	@include mq-down(tb){
-		width: $page-width-tb-sp;
-	}
-	@include mq-down(sp){
-		width: $page-width-sp;
-		padding-right: 15px;
-		padding-left: 15px;
-	}
-}
-
-.content-area {
-	width: 800px;
-	float: left;
-	@include mq-down(pc){
-		width: 600px;
-	}
-	@include mq-down(tb){
-		width: 100%;
-	}
-}
-
-.widget-area {
-	float: right;
-	width: 336px;
-	margin-bottom: 50px;
-	@include mq-down(tb){
-		width: 100%;
-	}
-}
+@import "layout";
 
 /*--------------------------------------------------------------
 	Custom CSS
@@ -773,7 +417,3 @@ h6 {
 	font-size: 85%;
 	margin-top: 2em;
 }
-
-// .post {
-// 	margin-bottom: 50px;
-// }
