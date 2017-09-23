@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
 
 == Description ==
-A simple designed WordPress theme - OleinPress. It doesn't have much functions on condition that this theme was made for customizing with child theme.
+A simple designed WordPress theme - OleinPress. It doesn't have much functionalities on condition that this theme was made for customizing with child theme.
 
 See the Demo. http://demo.olein-design.com/oleinpress
 
@@ -33,10 +33,10 @@ URL: http://fontawesome.io/license/
 Created by Dave Gandy
 
 == Changelog ==
-= 1.0.2 - Sep 23 2017
+= 1.0.2 - Sep 23 2017 =
 * Changed layout, design, menu on smartphone, and added some files for reviewing.
 
-= 1.0.1 - Aug 1 2017
+= 1.0.1 - Aug 1 2017 =
 * Bug fixed
 
 = 1.0.0 - Aug 1 2017 =
