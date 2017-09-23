@@ -33,8 +33,13 @@ URL: http://fontawesome.io/license/
 Created by Dave Gandy
 
 == Changelog ==
+= 1.0.2
+* Changed layout, design, menu on smartphone, and added some files for reviewing.
 
-= 1.0 - May 12 2015 =
+= 1.0.1 - Aug 1 2017
+* Bug fixed
+
+= 1.0.0 - Aug 1 2017 =
 * Initial release
 
 == Credits ==
