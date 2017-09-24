@@ -52,10 +52,16 @@
 			</div>
 		</div><!-- .site-branding -->
 	</header><!-- #masthead -->
+	<?php if ( get_header_image() ) : ?>
+	<div class="custom-header">
+		<!-- <div class="container"> -->
+			<?php the_header_image_tag(); ?>
+		<!-- </div> -->
+	</div>
+	<?php endif; ?>
 	<?php if ( has_nav_menu( 'header-menu' ) ) : ?>
 	<nav id="site-navigation" class="main-navigation">
 		<div class="main-navigation__inner container">
-			<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'oleinpress' ); ?></button> -->
 			<nav id="header-menu">
 				<?php
 					wp_nav_menu( array(

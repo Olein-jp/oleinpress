@@ -5,7 +5,7 @@ Theme URI: http://demo.olein-design.com/oleinpress/
 Author: Koji Kuno
 Author URI: http://olein-design.com
 Description: A simple designed WordPress theme - OleinPress. It doesn't have much functions on condition that this theme was made for customizing with child theme.
-Version: 1.0.3
+Version: 1.0.4
 License: GPL v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: oleinpress
@@ -3889,7 +3889,7 @@ object {
 	Breadcrumb
 --------------------------------------------------------------*/
 .breadcrumb {
-  background: #f4f4f4;
+  background: rgba(0, 0, 0, 0.05);
   font-size: 1.2rem;
 }
 
@@ -4304,9 +4304,21 @@ ol.comment-list {
 }
 
 .site-description {
-  color: #adb5bd;
+  color: #ffffff;
   font-size: 1.6rem;
   margin-bottom: 0;
+}
+
+/* custom header
+------------------------------*/
+.custom-header {
+  background: #18384f;
+}
+
+.custom-header img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
 }
 
 /* site-content

@@ -45,7 +45,6 @@ if ( ! function_exists( 'oleinpress_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'Header menu', 'oleinpress' ),
-			//'sns-menu' => esc_html__( 'SNS menu', 'oleinpress' ),
 		) );
 
 		/*
@@ -75,8 +74,8 @@ if ( ! function_exists( 'oleinpress_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 60,
+			'width'       => 300,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -100,7 +99,7 @@ add_action( 'after_setup_theme', 'oleinpress_content_width', 0 );
  * Registers an editor stylesheet for the theme.
  */
 function oleinpress_add_editor_styles() {
-    add_editor_style( 'custom-editor-style.css' );
+	add_editor_style( 'custom-editor-style.css' );
 }
 add_action( 'admin_init', 'oleinpress_add_editor_styles' );
 

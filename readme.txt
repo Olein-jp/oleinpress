@@ -3,10 +3,10 @@ Contributors: Koji Kuno (Olein Design)
 Requires at least: version 4.5 or higher
 Tested up to: WordPress 4.8.2
 Requires PHP: 5.2.4
-Version: 1.0.3
+Version: 1.0.4
 License: GPL v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, post-formats, sticky-post, editor-style, threaded-comments, custom-logo
+Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, sticky-post, editor-style, threaded-comments, custom-logo
 
 == Description ==
 A simple designed WordPress theme - OleinPress. It doesn't have much functionalities on condition that this theme was made for customizing with child theme.
@@ -32,7 +32,23 @@ Code License - MIT License
 URL: http://fontawesome.io/license/
 Created by Dave Gandy
 
+=== Copyright of image in screenshot ===
+License: CC0 Public Domain
+
+* http://finda.photo/image/16926
+
+=== skip-link-focus-fix.js ( from _s ) ===
+License: GPL2.0+
+
+* https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
+
 == Changelog ==
+= 1.0.4 - Sep 24 2017 =
+* Fixed code around custom header
+* Added text about copyright of screenshot image
+* Bug fixed
+* Changed screenshot.png
+
 = 1.0.3 - Sep 24 2017 =
 * Deleted the tag of post-format on style.CSS
 * Merged some fixes by Mirucon
