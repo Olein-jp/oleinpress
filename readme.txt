@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, sticky-post, editor-style, threaded-comments, custom-logo
 
 == Description ==
-A simple designed WordPress theme - OleinPress. It doesn't have much functionalities on condition that this theme was made for customizing with child theme.
+A simple designed WordPress theme,  OleinPress. It doesn't have much functionalities on condition that this theme was made for customizing with child theme.
 
 See the Demo. http://demo.olein-design.com/oleinpress
 
@@ -43,6 +43,10 @@ License: GPL2.0+
 * https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
 
 == Changelog ==
+= 1.0.5 - Sep 26 2017 =
+* Bug fixed
+* fixed 404.php which added get_sidebar()
+
 = 1.0.4 - Sep 24 2017 =
 * Fixed code around custom header
 * Added text about copyright of screenshot image
