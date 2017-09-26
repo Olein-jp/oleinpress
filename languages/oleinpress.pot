@@ -1,0 +1,288 @@
+# WordPress Blank Pot
+# Copyright (C) 2014 ...
+# This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: "
+"OleinPress WordPress "
+"theme\n"
+"POT-Creation-Date: "
+"2017-09-26 10:37+0900\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Your "
+"Name <you@example.com>\n"
+"Language-Team: Koji Kuno "
+"<info@olein-design.com>\n"
+"Report-Msgid-Bugs-To: "
+"Translator Name "
+"<translations@example."
+"com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/"
+"plain; charset=UTF-8\n"
+"Content-Transfer-"
+"Encoding: 8bit\n"
+"Plural-Forms: "
+"nplurals=2; plural=n != "
+"1;\n"
+"X-Textdomain-Support: "
+"yesX-Generator: Poedit "
+"1.6.4\n"
+"X-Poedit-SourceCharset: "
+"UTF-8\n"
+"X-Poedit-KeywordsList: "
+"__;_e;esc_html_e;"
+"esc_html_x:1,2c;"
+"esc_html__;esc_attr_e;"
+"esc_attr_x:1,2c;"
+"esc_attr__;_ex:1,2c;"
+"_nx:4c,1,2;"
+"_nx_noop:4c,1,2;_x:1,2c;"
+"_n:1,2;_n_noop:1,2;"
+"__ngettext:1,2;"
+"__ngettext_noop:1,2;_c,"
+"_nc:4c,1,2\n"
+"X-Poedit-Basepath: ..\n"
+"Language: en_US\n"
+"X-Generator: Poedit "
+"2.0.4\n"
+"X-Poedit-"
+"SearchPath-0: .\n"
+
+#: 404.php:17
+msgid ""
+"Oops! That page "
+"can&rsquo;t be found."
+msgstr ""
+
+#: 404.php:21
+msgid ""
+"It looks like nothing "
+"was found at this "
+"location. Maybe try one "
+"of the links below or a "
+"search?"
+msgstr ""
+
+#: 404.php:30
+msgid ""
+"Most Used Categories"
+msgstr ""
+
+#: 404.php:47
+#, php-format
+msgid ""
+"Try looking in the "
+"monthly archives. %1$s"
+msgstr ""
+
+#: comments.php:34
+#, php-format
+msgid ""
+"One thought on &ldquo;"
+"%1$s&rdquo;"
+msgstr ""
+
+#: comments.php:40
+#, php-format
+msgctxt "comments title"
+msgid ""
+"%1$s thought on &ldquo;"
+"%2$s&rdquo;"
+msgid_plural ""
+"%1$s thoughts on &ldquo;"
+"%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:63
+msgid ""
+"Comments are closed."
+msgstr ""
+
+#: footer.php:19
+msgid ""
+"OleinPress WordPress "
+"theme by "
+msgstr ""
+
+#: footer.php:19
+msgid ""
+"http://olein-design.com"
+msgstr ""
+
+#: footer.php:19
+msgid "Olein Design"
+msgstr ""
+
+#: functions.php:47
+msgid "Header menu"
+msgstr ""
+
+#: functions.php:113
+msgid "Sidebar"
+msgstr ""
+
+#: functions.php:115
+msgid "Add widgets here."
+msgstr ""
+
+#: header.php:26
+msgid "Skip to content"
+msgstr ""
+
+#: inc/breadcrumb.php:13
+msgid "Home"
+msgstr ""
+
+#: inc/breadcrumb.php:14
+#, php-format
+msgid ""
+"Archive by Category \"%s"
+"\""
+msgstr ""
+
+#: inc/breadcrumb.php:15
+#, php-format
+msgid "Archive for \"%s\""
+msgstr ""
+
+#: inc/breadcrumb.php:16
+#, php-format
+msgid ""
+"Search Results for \"%s"
+"\" Query"
+msgstr ""
+
+#: inc/breadcrumb.php:17
+#, php-format
+msgid "Posts Tagged \"%s\""
+msgstr ""
+
+#: inc/breadcrumb.php:18
+#, php-format
+msgid ""
+"Articles Posted by %s"
+msgstr ""
+
+#: inc/breadcrumb.php:19
+msgid "Error 404"
+msgstr ""
+
+#: inc/breadcrumb.php:122
+msgid "Page"
+msgstr ""
+
+#: inc/breadcrumb.php:148
+#: inc/breadcrumb.php:177
+#: inc/template-tags.php:29
+#, php-format
+msgctxt "post date"
+msgid "Posted on %s"
+msgstr ""
+
+#: inc/breadcrumb.php:153
+#: inc/breadcrumb.php:182
+#: inc/template-tags.php:35
+#, php-format
+msgctxt "post author"
+msgid "by %s"
+msgstr ""
+
+#: inc/breadcrumb.php:197
+#: inc/template-tags.php:52
+msgid ", "
+msgstr ""
+
+#: inc/breadcrumb.php:200
+#: inc/template-tags.php:55
+#, php-format
+msgid "Posted in %1$s"
+msgstr ""
+
+#: inc/breadcrumb.php:203
+#: inc/template-tags.php:59
+msgctxt ""
+"list item separator"
+msgid ", "
+msgstr ""
+
+#: inc/breadcrumb.php:206
+#: inc/template-tags.php:62
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/breadcrumb.php:215
+#: inc/template-tags.php:72
+#, php-format
+msgid ""
+"Leave a Comment<span "
+"class=\"screen-reader-"
+"text\"> on %s</span>"
+msgstr ""
+
+#: inc/breadcrumb.php:231
+#: inc/template-tags.php:89
+#: template-parts/content-page.php:35
+#, php-format
+msgid ""
+"Edit <span class="
+"\"screen-reader-text\">"
+"%s</span>"
+msgstr ""
+
+#: inc/customizer.php:26
+msgid ""
+"Header background color"
+msgstr ""
+
+#: search.php:21
+#, php-format
+msgid ""
+"Search Results for: %s"
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Nothing Found"
+msgstr ""
+
+#: template-parts/content-none.php:25
+#, php-format
+msgid ""
+"Ready to publish your "
+"first post? <a href="
+"\"%1$s\">Get started "
+"here</a>."
+msgstr ""
+
+#: template-parts/content-none.php:38
+msgid ""
+"Sorry, but nothing "
+"matched your search "
+"terms. Please try again "
+"with some different "
+"keywords."
+msgstr ""
+
+#: template-parts/content-none.php:44
+msgid ""
+"It seems we can&rsquo;t "
+"find what you&rsquo;re "
+"looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: template-parts/content-page.php:22
+#: template-parts/content.php:49
+msgid "Pages:"
+msgstr ""
+
+#: template-parts/content.php:38
+#, php-format
+msgid ""
+"Continue reading<span "
+"class=\"screen-reader-"
+"text\"> \"%s\"</span>"
+msgstr ""
