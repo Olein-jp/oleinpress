@@ -3915,6 +3915,10 @@ object {
   margin-right: 8px;
 }
 
+.posted-on .updated {
+  display: none;
+}
+
 .byline {
   display: inline-block;
 }
@@ -4219,6 +4223,19 @@ ol.comment-list {
   padding-bottom: 0;
 }
 
+/* Calendar widget */
+#wp-calendar caption {
+  padding-bottom: 10px;
+}
+
+#wp-calendar #prev {
+  text-align: left;
+}
+
+#wp-calendar #next {
+  text-align: right;
+}
+
 /*--------------------------------------------------------------
 	Layout
 --------------------------------------------------------------*/
@@ -4397,6 +4414,7 @@ table,
 th,
 td {
   border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 table {
