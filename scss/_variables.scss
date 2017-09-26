@@ -9,10 +9,10 @@ $brand-secondary: #702E2D !default;
 //======================================================================
 $link-color: #2375B0 !default;
 $link-decoration: none !default;
-$link-hover-color: darken( $link-color, 15% ) !default;
+$link-hover-color: darken( $link-color, 7% ) !default;
 $link-hover-decoration: underline !default;
 $link-active-color: $link-hover-color;
-$link-visited-color: darken( $link-color, 20% );
+$link-visited-color: darken( $link-color, 15% );
 
 //======================================================================
 // white & black

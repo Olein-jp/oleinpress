@@ -3196,16 +3196,16 @@ a {
 }
 
 a:hover {
-  color: #164b70;
+  color: #1d6192;
   text-decoration: underline;
 }
 
 a:active, a:focus {
-  color: #164b70;
+  color: #1d6192;
 }
 
 a:visited {
-  color: #123c5b;
+  color: #164b70;
 }
 
 /*--------------------------------------------------------------
@@ -3218,7 +3218,7 @@ a {
 
 a:active, a:hover {
   outline-width: 0;
-  color: #164b70;
+  color: #1d6192;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -3226,7 +3226,7 @@ a:active, a:hover {
 
 a:visited {
   outline: inherit;
-  color: #123c5b;
+  color: #164b70;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
@@ -4574,4 +4574,10 @@ h6 {
 .entry-footer {
   font-size: 85%;
   margin-top: 2em;
+}
+
+/* 404
+------------------------------*/
+.error-404.not-found .search-form {
+  margin-bottom: 30px;
 }
