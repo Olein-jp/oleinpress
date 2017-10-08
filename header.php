@@ -76,11 +76,6 @@
 		</div>
 	</nav><!-- #site-navigation -->
 	<?php endif; ?>
-	<div class="breadcrumb">
-		<div class="breadcrumb__inner container">
-			<?php oleinpress_breadcrumbs(); ?>
-		</div>
-	</div>
 
 	<div id="content" class="site-content">
 		<div class="site-content__inner container">

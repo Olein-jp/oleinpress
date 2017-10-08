@@ -3,7 +3,7 @@ Contributors: Koji Kuno (Olein Design)
 Requires at least: version 4.5 or higher
 Tested up to: WordPress 4.8.2
 Requires PHP: 5.2.4
-Version: 1.0.4
+Version: 1.0.6
 License: GPL v2.0 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: blog, two-columns, right-sidebar, grid-layout, translation-ready, custom-background, custom-header, custom-colors, custom-menu, featured-images, sticky-post, editor-style, threaded-comments, custom-logo
@@ -43,6 +43,10 @@ License: GPL2.0+
 * https://github.com/Automattic/_s/blob/master/js/skip-link-focus-fix.js
 
 == Changelog ==
+= 1.0.6 - Oct 8 2017
+* Fixed issues from reviwer.
+* Deleted breadcrumb.php, charset on style.css, and rtl.css
+
 = 1.0.5 - Sep 26 2017 =
 * Bug fixed
 * fixed 404.php which added get_sidebar()
